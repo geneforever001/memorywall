@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메인페이지 | GENE FOREVER</title>
+    <style>
+        /* 기본 스타일 및 색상 정의 (기존 기독교 홈페이지 테마 유지) */
+        :root {
+            --primary-navy: #002347;
+            --accent-gold: #C5A059;
+            --text-dark: #333;
+            --bg-light: #f8f9fa;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--white);
+        }
+
+        /* 헤더 섹션 */
+        header {
+            background-color: var(--primary-navy);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            color: var(--accent-gold);
+            font-size: 1.5rem; 
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            margin-left: 2rem;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent-gold);
+        }
+
+        /* 메인 비주얼 (Hero) */
+        .hero {
+            width: 100%;
+            padding-top: 70px; 
+            background-color: #27374D; 
+            text-align: center;
+        }
+        
+        .hero img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* 섹션 공통 스타일 */
+        section {
+            padding: 80px 10%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            color: var(--primary-navy);
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: var(--accent-gold);
+            margin: 15px auto 0;
+        }
+
+        /* 소개 그리드 */
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .intro-text h3 {
+            color: var(--accent-gold);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        /* 💡 팝업(모달) 공통 스타일 추가 */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal-overlay.show {
+            display: flex;
+            opacity: 1;
+        }
+
+        .modal-content {
+            background-color: var(--white);
+            padding: 40px;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 650px;
+            max-height: 80vh;
+            overflow-y: auto;
+            position: relative;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+            transform: translateY(-20px);
+            transition: transform 0.3s ease;
+        }
+
+        .modal-overlay.show .modal-content {
+            transform: translateY(0);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            font-size: 2rem;
+            color: #999;
+            cursor: pointer;
+            transition: color 0.3s;
+            line-height: 1;
+        }
+
+        .modal-close:hover {
+            color: var(--primary-navy);
+        }
+
+        .modal-body {
+            font-size: 0.95rem;
+            color: #555;
+            line-height: 1.8;
+            text-align: left;
+        }
+
+        .modal-body h4 {
+            color: var(--primary-navy);
+            margin-top: 25px;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        /* 푸터 */
+        footer {
+            background-color: var(--primary-navy);
+            color: var(--white);
+            padding: 40px 10%;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .intro-grid { grid-template-columns: 1fr !important; }
+            .intro-grid.reverse { direction: ltr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">GENE FOREVER</a>
+        <nav>
+            <a href="#home" style="color: var(--accent-gold);">메인페이지</a>
+            <a href="교회페이지.html">기억의 벽</a>
+            <a href="반려동물.html">반려동물</a>
+            <a href="DNA파크.html">DNA파크</a>
+        </nav>
+    </header>
+
+    <div class="hero" id="home">
+        <img src="브랜드dna앞부분.png" alt="차별화된 경쟁력으로 미래를 위한 가치를 제공합니다. 제네버는 살아 있을 때 DNA를 실물 형태로 보존하여 영원히 함께 할 수 있는 시스템을 설비해드립니다.">
+    </div>
+
+    <!-- 기업 소개 -->
+    <section id="about" style="background-color: var(--white); padding: 80px 5%;">
+        <h2 class="section-title" style="text-align: center; margin-bottom: 50px;">DNA 기반의 메모리얼 시스템 특허 출원</h2>
+        <div class="intro-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
+            <div class="intro-text">
+                <h3>DNA 기반 최상의 솔루션 기술집단</h3>
+                <p style="font-size: 1.05rem; margin-bottom: 15px; line-height: 1.8;">
+                    인류의 소중한 생명 정보를 영원히 잇는, DNA 기반의 최첨단 IT 기술력 확보
+                </p>
+                <p style="font-size: 1.05rem; margin-bottom: 20px; line-height: 1.8;">
+                    (주)진포에버는 생명의 근원인 DNA를 기반으로 한 '스마트 메모리얼 시스템(Smart Memorial System)'을 선도하며, 독보적인 기술력을 바탕으로 관련 분야의 특허를 출원한 바이오·IT 융합 전문 기업입니다.
+                </p>
+                <p style="font-size: 1.05rem; margin-bottom: 30px; line-height: 1.8;">
+                    (주)진포에버가 제공하는 서비스는 축적된 기술적 정교함과 인문학적 감성을 결합한 결과물입니다.<br>
+                    우리는 고객의 소중한 유전적 자산과 삶의 궤적을 가장 안전하고 품격 있게 보존하기 위해 최상의 맞춤형 솔루션을 제공합니다.
+                </p>
+            </div>
+            <div style="border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                <img src="dna_image1.png" alt="DNA 기술" style="width: 100%; height: auto;">
+            </div>
+        </div>
+    </section>
+
+    <!-- 종교 전용 시스템 -->
+    <section id="religion" style="background-color: var(--bg-light); padding: 80px 5%;">
+        <h2 class="section-title">종교 전용 스마트 DNA 시스템</h2>
+        <div class="intro-grid" style="direction: rtl;">
+            <div style="border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); direction: ltr; background-color: #eee; display: flex; align-items: center; justify-content: center;">
+                <a href="교회페이지.html" style="display: block; width: 100%; height: 100%;">
+                    <img src="dna_image2.png" alt="종교 전용 시스템" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.style.display='none'; this.parentNode.innerHTML='<span style=\'color: #999;\'>이미지 (dna_image2.png)</span>'">
+                </a>
+            </div>
+            <div class="intro-text" style="direction: ltr; padding-right: 40px;">
+                <h3>생명의 정수와 신앙의 유산을 영원히 잇다</h3>
+                <p style="font-size: 1.05rem; margin-bottom: 20px; line-height: 1.8;">
+                    (주)진포에버의 종교 전용 메모리얼 시스템은, 선대 성도와 수행자들의 고귀한 삶을 기록하는 '기억의 성소(Sacred Library)'를 지향하며, 각 종교의 교리와 현장 상황에 최적화된 맞춤형 헤리티지 구축 솔루션을 제공합니다.
+                </p>
+                <p style="font-size: 1.05rem; margin-bottom: 20px; line-height: 1.8;">
+                    평생을 헌신과 봉사로 정진해오신 성도님들의 유전적 정수가 담긴 DNA(G-CODE)를 최첨단 바이오 기술로 보존하고, '기억의 벽(Memory Wall)이라는 고귀한 공간을 탄생시켜, 그 안에 깃든 수행의 기록과 신앙의 고백을 디지털 콘텐츠로 통합 관리합니다.
+                </p>
+                <p style="font-size: 1.05rem; line-height: 1.8;">
+                    황동과 크리스탈 등 고품격 소재로 제작된 보존함은 종교적 경건함을 더하며, 생명의 설계도를 영원히 안전하게 수호할 것입니다.
+                </p>
+                <div style="margin-top: 30px;">
+                    <a href="교회페이지.html" style="display: inline-block; background-color: var(--accent-gold); color: var(--primary-navy); padding: 12px 30px; text-decoration: none; border-radius: 8px; font-weight: bold; transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">
+                        교회 페이지 바로가기 →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 반려동물 전용 시스템 -->
+    <section id="pet" style="background-color: var(--white); padding: 80px 5%;">
+        <h2 class="section-title">반려 동물 전용 DNA 시스템 설비</h2>
+        <div class="intro-grid">
+            <div class="intro-text">
+                <h3>영원히 교감하는 기억의 공간</h3>
+                <p style="font-size: 1.05rem; margin-bottom: 20px; line-height: 1.8;">
+                    DNA는 '살아있음'을 의미할 수 있습니다.<br>
+                    스마트 DNA 시스템은, 살아있을 때나 무지개 다리를 건넜을 때나, 영원히 기억하고 추억할 수 있는 시스템으로, 반려동물의 존재가 남겨져 있는 기억과 추억의 공간에 가족이 찾아와서, 사진과 영상으로 추억하며, 영원히 교감할 수 있는 시스템을 제공해 드립니다.
+                </p>
+                <div style="margin-top: 30px;">
+                    <a href="반려동물.html" style="display: inline-block; background-color: var(--accent-gold); color: var(--primary-navy); padding: 12px 30px; text-decoration: none; border-radius: 8px; font-weight: bold; transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">
+                        반려동물 페이지 바로가기 →
+                    </a>
+                </div>
+            </div>
+            <div style="border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); background-color: #eee; display: flex; align-items: center; justify-content: center;">
+                <a href="반려동물.html" style="display: block; width: 100%; height: 100%;">
+                    <img src="dna_image3.png" alt="반려동물 DNA 시스템" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.style.display='none'; this.parentNode.innerHTML='<span style=\'color: #999;\'>이미지 (dna_image3.png)</span>'">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- DNA 파크 비전 -->
+    <section id="vision" style="background-color: var(--bg-light); padding: 80px 5%;">
+        <h2 class="section-title">생명의 기록을 자연에 새기는 미래형 추모 플랫폼</h2>
+        <div class="intro-grid">
+            <div class="intro-text">
+                <p style="font-size: 1.05rem; margin-bottom: 15px; line-height: 1.8;">
+                    (주)진포에버는 기존 장묘 문화가 가진 물리적 공간의 한계와 세대 간 정서적 단절을 극복하는 새로운 추모 패러다임을 선도합니다.
+                </p>
+                <p style="font-size: 1.05rem; margin-bottom: 20px; line-height: 1.8;">
+                    대자연의 품에 고인을 모시는 친환경 자연장림과 첨단 바이오 아카이빙 기술을 완벽하게 융합하여, 시공간을 초월해 영원히 이어지는 가족 중심의 하이브리드 추모 플랫폼을 구축·운영됩니다(2026년 11월 완공 예정)
+                </p>
+                <p style="font-size: 1.05rem; margin-bottom: 15px; line-height: 1.8;">
+                    나아가 오프라인 안치에 머물지 않고, 명패에 새겨진 QR코드와 모바일 앱을 연동한 ‘스마트 DNA 뷰어’ 서비스를 함께 제공합니다.<br>
+                    스마트폰을 통해 고인의 생전 존영, 일대기 영상, 목소리 등 살아 숨 쉬는 디지털 기록을 언제 어디서나 확인하실 수 있습니다.
+                </p>
+                <p style="font-size: 1.05rem; line-height: 1.8;">
+                    진포에버는 이 일상 속 디지털 추모 생태계를 통해, 가문의 신앙 유산과 추억이 다음 세대로 영원히 이어지는 고귀한 헤리티지를 완성해 가고 있습니다.
+                </p>
+                <div style="margin-top: 30px;">
+                    <a href="DNA파크.html" style="display: inline-block; background-color: var(--accent-gold); color: var(--primary-navy); padding: 12px 30px; text-decoration: none; border-radius: 8px; font-weight: bold; transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">
+                        DNA파크 바로가기 →
+                    </a>
+                </div>
+            </div>
+            <div style="border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); background-color: #eee; display: flex; align-items: center; justify-content: center;">
+                <a href="DNA파크.html" style="display: block; width: 100%; height: 100%;">
+                    <img src="memoryhall.png" alt="기억의 전당" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.style.display='none'; this.parentNode.innerHTML='<span style=\'color: #999;\'>이미지 (memoryhall.png)</span>'">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 💡 통일된 푸터 및 약관 팝업 연동 -->
+    <footer>
+        <div style="display: flex; justify-content: center; align-items: center; gap: 20px; margin-bottom: 20px;">
+            <a href="#" style="color: var(--accent-gold); text-decoration: none; font-size: 0.9rem;">회사소개</a>
+            <span style="color: rgba(255,255,255,0.3);">|</span>
+            <a href="#" onclick="openPrivacyModal(event)" style="color: var(--accent-gold); text-decoration: none; font-size: 0.9rem;">개인정보처리방침</a>
+            <span style="color: rgba(255,255,255,0.3);">|</span>
+            <a href="#" onclick="openTermsModal(event)" style="color: var(--accent-gold); text-decoration: none; font-size: 0.9rem;">이용약관</a>
+        </div>
+        <p style="margin-bottom: 10px; font-weight: bold;">진포에버(주) | ☎(032)822-0555(代) Fax.(0504)031-9411</p>
+        <p style="margin-bottom: 10px; font-size: 0.9rem; opacity: 0.8;">인천시 계양구 계산새로 87번길 6. 레드몰 2차 5층 504호</p>
+        <p style="margin-bottom: 20px; font-size: 0.9rem; opacity: 0.8;">기억의 벽 프랜차이즈 사업본부</p>
+        <p style="font-size: 0.85rem; opacity: 0.6;">All rights reserved.</p>
+    </footer>
+
+    <!-- 💡 개인정보처리방침 모달 -->
+    <div id="privacyModal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closePrivacyModal()">&times;</span>
+            <h2 style="color: var(--primary-navy); margin-bottom: 20px; text-align: center;">개인정보처리방침</h2>
+            <div class="modal-body">
+                <p><strong>진포에버(주)</strong>(이하 '회사'라 한다)는 개인정보 보호법 제30조에 따라 정보주체의 개인정보를 보호하고 이와 관련한 고충을 신속하고 원활하게 처리할 수 있도록 하기 위하여 다음과 같이 개인정보 처리방침을 수립·공개합니다.</p>
+                <h4 style="color: var(--primary-navy); margin-top: 25px; margin-bottom: 10px; font-size: 1.1rem;">제1조(개인정보의 처리 목적)</h4>
+                <p>회사는 다음의 목적을 위하여 개인정보를 처리합니다. 처리하고 있는 개인정보는 다음의 목적 이외의 용도로는 이용되지 않으며 이용 목적이 변경되는 경우에는 개인정보 보호법 제18조에 따라 별도의 동의를 받는 등 필요한 조치를 이행할 예정입니다.<br>
+                1. 홈페이지 회원가입 및 관리<br>
+                2. 재화 또는 서비스 제공<br>
+                3. 마케팅 및 광고에의 활용</p>
+                <h4 style="color: var(--primary-navy); margin-top: 25px; margin-bottom: 10px; font-size: 1.1rem;">제2조(개인정보의 처리 및 보유 기간)</h4>
+                <p>① 회사는 법령에 따른 개인정보 보유·이용기간 또는 정보주체로부터 개인정보를 수집 시에 동의받은 개인정보 보유·이용기간 내에서 개인정보를 처리·보유합니다.<br>
+                ② 각각의 개인정보 처리 및 보유 기간은 다음과 같습니다.<br>
+                1. 홈페이지 회원가입 및 관리 : 사업자/단체 홈페이지 탈퇴시까지<br>
+                2. 재화 또는 서비스 제공 : 재화·서비스 공급완료 및 요금결제·정산 완료시까지</p>
+                <h4 style="color: var(--primary-navy); margin-top: 25px; margin-bottom: 10px; font-size: 1.1rem;">제3조(정보주체와 법정대리인의 권리·의무 및 그 행사방법)</h4>
+                <p>① 정보주체는 회사에 대해 언제든지 개인정보 열람·정정·삭제·처리정지 요구 등의 권리를 행사할 수 있습니다.<br>
+                ② 제1항에 따른 권리 행사는 회사에 대해 개인정보 보호법 시행령 제41조제1항에 따라 서면, 전자우편, 모사전송(FAX) 등을 통하여 하실 수 있으며 회사는 이에 대해 지체 없이 조치하겠습니다.</p>
+                <h4 style="color: var(--primary-navy); margin-top: 25px; margin-bottom: 10px; font-size: 1.1rem;">제4조(처리하는 개인정보의 항목 작성)</h4>
+                <p>회사는 다음의 개인정보 항목을 처리하고 있습니다.<br>
+                - 필수항목 : 성명, 생년월일, 아이디, 비밀번호, 주소, 전화번호, 성별, 이메일, 신앙 정보(소속 교회 등)<br>
+                - 선택항목 : 직업, 가족관계</p>
+                <h4 style="color: var(--primary-navy); margin-top: 25px; margin-bottom: 10px; font-size: 1.1rem;">제5조(개인정보의 파기)</h4>
+                <p>회사는 원칙적으로 개인정보 처리목적이 달성된 경우에는 지체없이 해당 개인정보 파기합니다. 파기의 절차, 기한 및 방법은 다음과 같습니다.<br>
+                - 파기절차: 이용자가 입력한 정보는 목적 달성 후 별도의 DB에 옮겨져 내부 방침 및 기타 관련 법령에 따라 일정기간 저장된 후 혹은 즉시 파기됩니다.<br>
+                - 파기방법: 전자적 파일 형태의 정보는 기록을 재생할 수 없는 기술적 방법을 사용합니다.</p>
+                <h4 style="color: var(--primary-navy); margin-top: 25px; margin-bottom: 10px; font-size: 1.1rem;">제6조(개인정보 보호책임자)</h4>
+                <p>회사는 개인정보 처리에 관한 업무를 총괄해서 책임지고, 개인정보 처리와 관련한 정보주체의 불만처리 및 피해구제 등을 위하여 아래와 같이 개인정보 보호책임자를 지정하고 있습니다.<br>
+                ▶ 개인정보 보호책임자<br>
+                성명 : OOO<br>
+                직책 : OOO<br>
+                연락처 : 032-822-0555, email@geneforever.com</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 💡 이용약관 모달 -->
+    <div id="termsModal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeTermsModal()">&times;</span>
+            <h2 style="color: var(--primary-navy); margin-bottom: 20px; text-align: center;">이용약관</h2>
+            <div class="modal-body">
+                <p><strong>진포에버(주)</strong>(이하 '회사'라 합니다)의 서비스 이용약관은 다음과 같습니다.</p>
+                <h4 style="color: var(--primary-navy); margin-top: 25px; margin-bottom: 10px; font-size: 1.1rem;">제1조 (목적)</h4>
+                <p>본 약관은 회사가 제공하는 스마트 메모리얼 시스템(DNA 보존 및 디지털 아카이브) 및 관련 제반 서비스의 이용과 관련하여 회사와 회원 간의 권리, 의무 및 책임사항, 기타 필요한 사항을 규정함을 목적으로 합니다.</p>
+                <h4 style="color: var(--primary-navy); margin-top: 25px; margin-bottom: 10px; font-size: 1.1rem;">제2조 (서비스의 제공)</h4>
+                <p>회사는 다음과 같은 서비스를 제공합니다.<br>
+                1. DNA 및 생체정보(케라틴 등)의 추출 및 보존 서비스<br>
+                2. 디지털 데이터(사진, 영상, 약력 등)의 아카이빙 및 스마트 뷰어 서비스<br>
+                3. 기타 회사가 추가 개발하거나 제휴계약 등을 통해 회원에게 제공하는 일체의 서비스</p>
+                <h4 style="color: var(--primary-navy); margin-top: 25px; margin-bottom: 10px; font-size: 1.1rem;">제3조 (이용계약의 체결)</h4>
+                <p>① 이용계약은 회원이 되고자 하는 자가 본 약관의 내용에 대하여 동의를 한 다음 서비스 가입 및 이용 신청을 하고 회사가 이러한 신청에 대하여 승낙함으로써 체결됩니다.<br>
+                ② 회사는 허위 정보 기재, 부정한 목적의 신청 등 상당한 이유가 있는 경우 승낙을 유보하거나 거절할 수 있습니다.</p>
+                <h4 style="color: var(--primary-navy); margin-top: 25px; margin-bottom: 10px; font-size: 1.1rem;">제4조 (회원의 의무)</h4>
+                <p>① 회원은 관계법령, 본 약관의 규정, 이용안내 및 서비스와 관련하여 공지한 주의사항 등을 준수하여야 하며, 기타 회사의 업무에 방해되는 행위를 하여서는 안 됩니다.<br>
+                ② 회원은 제공받은 계정 및 접속 QR코드(또는 인증 정보)를 제3자에게 양도, 대여할 수 없으며, 이에 대한 관리 책임은 회원에게 있습니다.</p>
+                <h4 style="color: var(--primary-navy); margin-top: 25px; margin-bottom: 10px; font-size: 1.1rem;">제5조 (계약 해지 및 환불)</h4>
+                <p>① 회원은 언제든지 서비스 이용계약 해지를 신청할 수 있으며, 회사는 관련 법령이 정하는 바에 따라 이를 즉시 처리하여야 합니다.<br>
+                ② DNA 보존 작업이 개시된 이후에는 작업 특성상 실비용이 공제된 후 환불되거나 환불이 제한될 수 있으며, 상세한 환불 규정은 별도의 서비스 계약서에 따릅니다.</p>
+                <h4 style="color: var(--primary-navy); margin-top: 25px; margin-bottom: 10px; font-size: 1.1rem;">제6조 (면책 조항)</h4>
+                <p>① 회사는 천재지변 또는 이에 준하는 불가항력으로 인하여 서비스를 제공할 수 없는 경우에는 서비스 제공에 관한 책임이 면제됩니다.<br>
+                ② 회사는 회원의 귀책사유로 인한 서비스 이용의 장애에 대하여는 책임을 지지 않습니다.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 💡 스크립트 영역 (두 개의 팝업 기능 모두 통합) -->
+    <script>
+        const privacyModal = document.getElementById('privacyModal');
+        
+        function openPrivacyModal(event) {
+            event.preventDefault(); 
+            privacyModal.style.display = 'flex';
+            setTimeout(() => { privacyModal.classList.add('show'); }, 10);
+        }
+
+        function closePrivacyModal() {
+            privacyModal.classList.remove('show');
+            setTimeout(() => { privacyModal.style.display = 'none'; }, 300); 
+        }
+
+        const termsModal = document.getElementById('termsModal');
+        
+        function openTermsModal(event) {
+            event.preventDefault(); 
+            termsModal.style.display = 'flex';
+            setTimeout(() => { termsModal.classList.add('show'); }, 10);
+        }
+
+        function closeTermsModal() {
+            termsModal.classList.remove('show');
+            setTimeout(() => { termsModal.style.display = 'none'; }, 300); 
+        }
+
+        // 모달창 바깥쪽 어두운 배경 클릭 시 두 팝업 모두 닫기 적용
+        window.addEventListener('click', (event) => {
+            if (event.target === privacyModal) {
+                closePrivacyModal();
+            }
+            if (event.target === termsModal) {
+                closeTermsModal();
+            }
+        });
+
+        const sections = document.querySelectorAll("section, .hero");
+        const navLinks = document.querySelectorAll("nav a");
+
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.6
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.getAttribute("id") || "home";
+                    navLinks.forEach(link => {
+                        link.style.color = "";
+                        if (link.getAttribute("href") === `#${id}`) {
+                            link.style.color = "var(--accent-gold)";
+                        }
+                    });
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(section => observer.observe(section));
+    </script>
+</body>
+</html>
