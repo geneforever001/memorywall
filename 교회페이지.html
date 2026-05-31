@@ -238,27 +238,39 @@
         }
 
         @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                padding: 15px 5%;
-            }
-            .logo {
-                margin-bottom: 12px;
-                font-size: 1.4rem;
-            }
-            nav {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 15px;
-                width: 100%;
-            }
-            nav a {
-                margin-left: 0;
-            }
-            .hero {
-                padding-top: 120px;
-            }
+    /* 1. 헤더 영역을 세로(column)로 정렬하여 로고와 메뉴를 위아래로 분리 */
+    header {
+        flex-direction: column;
+        padding: 15px 5%;
+    }
+    
+    /* 2. 로고 하단 여백 추가 및 폰트 사이즈 미세조정 */
+    .logo {
+        margin-bottom: 12px;
+        font-size: 1.4rem;
+    }
+    
+    /* 3. 메뉴 링크들을 감싸서 중앙 정렬하고 겹치지 않게 gap 설정 */
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        width: 100%;
+    }
+    
+    /* 4. 기존 PC 버전에 있던 왼쪽 여백 제거 */
+    nav a {
+        margin-left: 0;
+    }
+    
+    /* 5. 헤더 높이가 커진 만큼 메인 이미지(hero)가 가려지지 않게 상단 여백 확보 */
+    .hero {
+        padding-top: 120px;
+    }
+    
+    /* 기존에 있던 다른 모바일 코드들(intro-grid 등)은 이 아래에 유지됩니다 */
+}
 
             .intro-grid { grid-template-columns: 1fr; }
             .hero h1 { font-size: 2rem; }
