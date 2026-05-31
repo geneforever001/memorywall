@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light">
     <title>DNA 파크 | GENE FOREVER</title>
     <style>
         /* 기본 스타일 및 색상 정의 (메인페이지 테마 완벽 통일) */
@@ -450,9 +451,32 @@
         }
 
         @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                padding: 15px 5%;
+            }
+            .logo {
+                margin-bottom: 12px;
+                font-size: 1.4rem;
+            }
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+                width: 100%;
+            }
+            nav a {
+                margin-left: 0;
+            }
+            .hero {
+                padding-top: 120px;
+            }
+
             .intro-grid { grid-template-columns: 1fr; }
             .intro-grid.reverse { direction: ltr; }
             
+            /* 모바일: 중앙 이미지는 위로, 1~4번은 아래 2열(2x2)로 배치 */
             .viewer-custom-layout { 
                 grid-template-areas: 
                     "box5 box5"
@@ -532,9 +556,9 @@
 <body>
 
     <header>
-        <a href="index.html" class="logo">GENE FOREVER</a>
+        <a href="메인페이지.html" class="logo">GENE FOREVER</a>
         <nav>
-            <a href="index.html">메인페이지</a>
+            <a href="메인페이지.html">메인페이지</a>
             <a href="교회페이지.html">기억의 벽</a>
             <a href="반려동물.html">반려동물</a>
             <a href="DNA파크.html" style="color: var(--accent-gold);">DNA파크</a>
@@ -672,7 +696,7 @@
                 <!-- Box 5 (중앙 메인) -->
                 <div class="box5-wrapper">
                     <div class="viewer-center">
-                        <img src="중앙이미지5.png" alt="중앙 스마트 뷰어 스크린" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.style.display='none'; this.parentNode.innerHTML='<span style=\'color: #999; font-size: 1.1rem; font-weight: bold;\'>[중앙 이미지 5]</span>'">
+                        <img src="중앙이미지5.jpg" alt="중앙 스마트 뷰어 스크린" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.style.display='none'; this.parentNode.innerHTML='<span style=\'color: #999; font-size: 1.1rem; font-weight: bold;\'>[중앙 이미지 5]</span>'">
                     </div>
                 </div>
 
@@ -731,7 +755,7 @@
     <!-- 💡 통일된 푸터 및 약관 팝업 연동 -->
     <footer>
         <div style="display: flex; justify-content: center; align-items: center; gap: 20px; margin-bottom: 20px;">
-            <a href="index.html#about" style="color: var(--accent-gold); text-decoration: none; font-size: 0.9rem;">회사소개</a>
+            <a href="메인페이지.html#about" style="color: var(--accent-gold); text-decoration: none; font-size: 0.9rem;">회사소개</a>
             <span style="color: rgba(255,255,255,0.3);">|</span>
             <a href="#" onclick="openPrivacyModal(event)" style="color: var(--accent-gold); text-decoration: none; font-size: 0.9rem;">개인정보처리방침</a>
             <span style="color: rgba(255,255,255,0.3);">|</span>
