@@ -238,40 +238,46 @@
         }
 
         @media (max-width: 768px) {
-    /* 1. 헤더 영역을 세로(column)로 정렬하여 로고와 메뉴를 위아래로 분리 */
-    header {
-        flex-direction: column;
-        padding: 15px 5%;
-    }
-    
-    /* 2. 로고 하단 여백 추가 및 폰트 사이즈 미세조정 */
-    .logo {
-        margin-bottom: 12px;
-        font-size: 1.4rem;
-    }
-    
-    /* 3. 메뉴 링크들을 감싸서 중앙 정렬하고 겹치지 않게 gap 설정 */
-    nav {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-        width: 100%;
-    }
-    
-    /* 4. 기존 PC 버전에 있던 왼쪽 여백 제거 */
-    nav a {
-        margin-left: 0;
-    }
-    
-    /* 5. 헤더 높이가 커진 만큼 메인 이미지(hero)가 가려지지 않게 상단 여백 확보 */
-    .hero {
-        padding-top: 120px;
-    }
-    
-    /* 기존에 있던 다른 모바일 코드들(intro-grid 등)은 이 아래에 유지됩니다 */
-}
-
+            /* 1. 헤더 영역을 세로(column)로 정렬하여 로고와 메뉴를 위아래로 분리 */
+            header {
+                flex-direction: column;
+                padding: 15px 5%;
+            }
+            
+            /* 2. 로고 하단 여백 추가 및 폰트 사이즈 미세조정 */
+            .logo {
+                margin-bottom: 12px;
+                font-size: 1.4rem;
+            }
+            
+            /* 3. 메뉴 링크들을 감싸서 중앙 정렬하고 겹치지 않게 gap 설정 */
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+                width: 100%;
+            }
+            
+            /* 4. 기존 PC 버전에 있던 왼쪽 여백 제거 */
+            nav a {
+                margin-left: 0;
+            }
+            
+            /* 5. 헤더 높이가 커진 만큼 메인 이미지(hero)가 가려지지 않게 상단 여백 확보 */
+            .hero {
+                padding-top: 120px;
+            }
+            
+            /* 6. 헌금 사역 표 모바일 대응 */
+            .mission-table th, .mission-table td {
+                padding: 12px 8px !important;
+                font-size: 0.85rem !important;
+            }
+            .mission-table td:first-child {
+                padding-left: 10px !important;
+            }
+            
             .intro-grid { grid-template-columns: 1fr; }
             .hero h1 { font-size: 2rem; }
         }
@@ -291,8 +297,8 @@
 
     <div class="hero">
         <h1>하나님이 새기신 생명의 설계도</h1>
-        <p>수십 년 사역의 헌신이 교회와 가문의 이름으로 영원히 함께합니다.<br>
-            임마누엘 생명 유산 사역, 진포에버가 성도님의 신앙을 보존합니다.</p>
+        <p>수십 년 사역의 헌신이<br>교회와 가문의 이름으로 영원히 함께합니다.<br>
+            임마누엘 생명 유산 사역<br>우리 교회에서 성도님의 영원한 믿음을 기억합니다.</p>
     </div>
 
     <section id="about">
@@ -310,7 +316,7 @@
     
     <section id="gcode-detail" style="background-color: var(--white); padding: 40px 10% 80px 10%;">
         <h2 class="section-title">G-Code란 무엇인가?</h2>
-        <p style="text-align: center; margin-bottom: 40px; color: #666;">하나님의 창조 설계도! DNA 안에 새겨진 생명의 친필 서명</p>
+        <p style="text-align: center; margin-bottom: 40px; color: #666;">하나님의 창조 설계도!<br>DNA 안에 새겨진 생명의 친필 서명</p>
         
         <div class="card-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
             <div class="card" style="background: #001a33; color: #ffffff; padding: 40px 30px; border-radius: 25px; border: none; box-shadow: 0 10px 30px rgba(0,0,0,0.15); transition: transform 0.3s;">
@@ -351,7 +357,7 @@
     </section>
 
     <section id="biblical-meaning" style="background-color: var(--white); padding: 40px 10% 80px 10%;">
-        <h2 class="section-title">보존 매개체의 성경적 의미</h2>
+        <h2 class="section-title">보존 매개체의<br>성경적 의미</h2>
         
         <div class="card-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
             
@@ -385,59 +391,70 @@
         </div>
     </section>
 
+    <!-- 💡 수정된 부분: 모바일 깨짐 방지를 위한 상하 배치 (flex column 적용) -->
     <section id="church-benefits" style="background-color: var(--bg-light); color: var(--text-dark); padding: 50px 10% 100px 10%;">
-        <div class="intro-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
+        <div style="display: flex; flex-direction: column; gap: 40px; max-width: 1000px; margin: 0 auto; align-items: center;">
             
-            <div class="intro-text">
-                <h2 class="section-title" style="text-align: left; margin-left: 0; margin-bottom: 20px;">교회가 얻는 명분과 유익</h2>
-                <p style="color: #1abc9c; border: 1px solid #1abc9c; display: inline-block; padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; margin-bottom: 25px; font-weight: bold;">
-                    "주님 전에서 영원히 함께합니다"
-                </p>
+            <!-- 1. 이미지를 위로 배치 -->
+            <div style="border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); width: 100%;">
+                <img src="KakaoTalk_20260315_011117429_01.jpg" alt="교회 대예배당 전경" style="width: 100%; max-height: 450px; display: block; object-fit: cover;">
+            </div>
+
+            <!-- 2. 텍스트를 아래로 배치 -->
+            <div style="width: 100%;">
+                <!-- 상하 구조에 맞게 제목 중앙 정렬 및 여백 조정 -->
+                <h2 class="section-title" style="margin-bottom: 20px;">교회가 얻는 명분과 유익</h2>
                 
-                <h3 style="color: var(--primary-navy); margin-bottom: 20px; font-size: 1.5rem;">영적 돌봄의 완성</h3>
-                <ul style="list-style: none; padding: 0;">
-                    <li style="display: flex; margin-bottom: 20px; line-height: 1.7; color: var(--text-dark);">
-                        <span style="color: var(--primary-navy); margin-right: 8px; font-weight: bold;">•</span>
-                        <div>
-                            <strong style="color: var(--primary-navy); font-size: 1.1rem; display: block;">돌봄의 확장</strong>
-                            <span style="color: #444;">유아세례부터 천국 시민이 되는 순간까지, 교회가 책임지는 목회적 신뢰가 구축됩니다.</span>
-                        </div>
-                    </li>
+                <div style="text-align: center; margin-bottom: 30px;">
+                    <p style="color: #1abc9c; border: 1px solid #1abc9c; display: inline-block; padding: 5px 15px; border-radius: 20px; font-size: 0.95rem; font-weight: bold;">
+                        "주님 전에서 영원히 함께합니다"
+                    </p>
+                </div>
+                
+                <!-- 본문 내용은 가독성을 위해 정해진 폭 안에서 가운데 정렬 배치 -->
+                <div style="max-width: 800px; margin: 0 auto;">
+                    <h3 style="color: var(--primary-navy); margin-bottom: 25px; font-size: 1.5rem; text-align: center;">영적 돌봄의 완성</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="display: flex; margin-bottom: 20px; line-height: 1.7; color: var(--text-dark);">
+                            <span style="color: var(--primary-navy); margin-right: 12px; font-weight: bold; font-size: 1.2rem;">•</span>
+                            <div>
+                                <strong style="color: var(--primary-navy); font-size: 1.1rem; display: block; margin-bottom: 5px;">돌봄의 확장</strong>
+                                <span style="color: #444;">유아세례부터 천국 시민이 되는 순간까지, 교회가 책임지는 목회적 신뢰가 구축됩니다.</span>
+                            </div>
+                        </li>
 
-                    <li style="display: flex; margin-bottom: 20px; line-height: 1.7; color: var(--text-dark);">
-                        <span style="color: var(--primary-navy); margin-right: 8px; font-weight: bold;">•</span>
-                        <div>
-                            <strong style="color: var(--primary-navy); font-size: 1.1rem; display: block;">교회 역사 아카이브</strong>
-                            <span style="color: #444;">무명 성도 한 명 한 명의 생명 설계도가 모여 교회의 살아있는 역사가 완성됩니다.</span>
-                        </div>
-                    </li>
+                        <li style="display: flex; margin-bottom: 20px; line-height: 1.7; color: var(--text-dark);">
+                            <span style="color: var(--primary-navy); margin-right: 12px; font-weight: bold; font-size: 1.2rem;">•</span>
+                            <div>
+                                <strong style="color: var(--primary-navy); font-size: 1.1rem; display: block; margin-bottom: 5px;">교회 역사 아카이브</strong>
+                                <span style="color: #444;">무명 성도 한 명 한 명의 생명 설계도가 모여 교회의 살아있는 역사가 완성됩니다.</span>
+                            </div>
+                        </li>
 
-                    <li style="display: flex; margin-bottom: 20px; line-height: 1.7; color: var(--text-dark);">
-                        <span style="color: var(--primary-navy); margin-right: 8px; font-weight: bold;">•</span>
-                        <div>
-                            <strong style="color: var(--primary-navy); font-size: 1.1rem; display: block;">자연스러운 전도 효과</strong>
-                            <span style="color: #444;">후손 및 지역민의 유입으로 자연스러운 전도 효과가 생깁니다.</span>
-                        </div>
-                    </li>
+                        <li style="display: flex; margin-bottom: 20px; line-height: 1.7; color: var(--text-dark);">
+                            <span style="color: var(--primary-navy); margin-right: 12px; font-weight: bold; font-size: 1.2rem;">•</span>
+                            <div>
+                                <strong style="color: var(--primary-navy); font-size: 1.1rem; display: block; margin-bottom: 5px;">자연스러운 전도 효과</strong>
+                                <span style="color: #444;">후손 및 지역민의 유입으로 자연스러운 전도 효과가 생깁니다.</span>
+                            </div>
+                        </li>
 
-                    <li style="display: flex; margin-bottom: 20px; line-height: 1.7; color: var(--text-dark);">
-                        <span style="color: var(--primary-navy); margin-right: 8px; font-weight: bold;">•</span>
-                        <div>
-                            <strong style="color: var(--primary-navy); font-size: 1.1rem; display: block;">재정의 선순환</strong>
-                            <span style="color: #444;">성도 예우 사역에서 발생한 지원금이 선교와 복지로 환원되어 사역의 동력이 됩니다.</span>
-                        </div>
-                    </li>
-                </ul>
+                        <li style="display: flex; margin-bottom: 20px; line-height: 1.7; color: var(--text-dark);">
+                            <span style="color: var(--primary-navy); margin-right: 12px; font-weight: bold; font-size: 1.2rem;">•</span>
+                            <div>
+                                <strong style="color: var(--primary-navy); font-size: 1.1rem; display: block; margin-bottom: 5px;">재정의 선순환</strong>
+                                <span style="color: #444;">성도 예우 사역에서 발생한 지원금이 선교와 복지로 환원되어 사역의 동력이 됩니다.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
 
-            <div style="border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-                <img src="KakaoTalk_20260315_011117429_01.jpg" alt="교회 대예배당 전경" style="width: 100%; height: auto; display: block; object-fit: cover;">
-            </div>
         </div>
     </section>
 
     <section id="family-benefits" style="background-color: var(--white); padding: 40px 10% 80px 10%;">
-        <h2 class="section-title">성도님과 가족이 얻는 실질적 유익</h2>
+        <h2 class="section-title">성도님과 가족이 얻는<br>실질적 유익</h2>
         
         <div class="card-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
             
@@ -445,8 +462,8 @@
                 <div style="font-size: 2.5rem; margin-bottom: 20px;">👥</div>
                 <h4 style="color: #C5A059; margin-bottom: 15px; font-size: 1.3rem;">최고의 효도와 예우</h4>
                 <p style="font-size: 0.95rem; line-height: 1.7; opacity: 0.9;">
-                    부모님의 DNA를 영구 보존하고 디지털 자료를 언제든 기억하고 기릴 수 있는 
-                    <span style="color: #00f5d4; font-weight: bold;">물리적·영적 거점</span>을 마련합니다.
+                    부모님의 DNA와 함께, 부모님의 삶의 역사가 담긴 사진, 영상 자료를 100년후의 후손들에게도 보여주며 가족의 뿌리를 남기는
+                    <span style="color: #00f5d4; font-weight: bold;">물리적·영적 거점</span>이 마련됩니다.
                 </p>
             </div>
 
@@ -470,7 +487,7 @@
     </section>
 
     <section id="offering-mission" style="background-color: var(--white); padding: 40px 10% 80px 10%;">
-        <h2 class="section-title">성도님의 생명 인장이 교회의 거룩한 사역이 됩니다</h2>
+        <h2 class="section-title">성도님의 생명 인장이<br>교회의 거룩한 사역이 됩니다</h2>
         
         <div style="max-width: 1000px; margin: 0 auto; background: #ffffff; border-radius: 20px; overflow: hidden; border: 1px solid #eee; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
             <div style="padding: 30px; border-bottom: 1px solid #eee;">
@@ -485,11 +502,10 @@
             </div>
 
             <div style="overflow-x: auto;">
-                <table style="width: 100%; border-collapse: collapse; text-align: center; color: #222; min-width: 800px;">
+                <table class="mission-table" style="width: 100%; border-collapse: collapse; text-align: center; color: #222; word-break: keep-all;">
                     <thead>
                         <tr style="background-color: #f8f9fa; color: var(--primary-navy); border-bottom: 2px solid var(--primary-navy);">
                             <th style="padding: 18px; border-right: 1px solid #eee; font-weight: 800;">사역 종류</th>
-                            <th style="padding: 18px; border-right: 1px solid #eee; font-weight: 800;">선택</th>
                             <th style="padding: 18px; border-right: 1px solid #eee; font-weight: 800;">후원 대상 및 내용</th>
                             <th style="padding: 18px; font-weight: 800;">성경적 가치</th>
                         </tr>
@@ -497,25 +513,21 @@
                     <tbody style="font-weight: 500;">
                         <tr style="border-bottom: 1px solid #eee;">
                             <td style="padding: 20px; border-right: 1px solid #eee; text-align: left; padding-left: 30px; font-weight: 700;">○ 선한 사마리아인 사역</td>
-                            <td style="padding: 20px; border-right: 1px solid #eee;">( &nbsp;&nbsp; )</td>
                             <td style="padding: 20px; border-right: 1px solid #eee; color: #800080; font-weight: 700;">지역사회 소외계층 및 독거노인 지원</td>
                             <td style="padding: 20px; font-style: italic; color: #555;">"네 이웃을 네 자신과 같이 사랑하라"</td>
                         </tr>
                         <tr style="background: #fafafa; border-bottom: 1px solid #eee;">
                             <td style="padding: 20px; border-right: 1px solid #eee; text-align: left; padding-left: 30px; font-weight: 700;">○ 마르다 선교 사역</td>
-                            <td style="padding: 20px; border-right: 1px solid #eee;">( &nbsp;&nbsp; )</td>
                             <td style="padding: 20px; border-right: 1px solid #eee; color: #800080; font-weight: 700;">국내외 미자립 교회 및 선교사 후원</td>
                             <td style="padding: 20px; font-style: italic; color: #555;">"땅끝까지 이르러 내 증인이 되리라"</td>
                         </tr>
                         <tr style="border-bottom: 1px solid #eee;">
                             <td style="padding: 20px; border-right: 1px solid #eee; text-align: left; padding-left: 30px; font-weight: 700;">○ 요셉 꿈나무 사역</td>
-                            <td style="padding: 20px; border-right: 1px solid #eee;">( &nbsp;&nbsp; )</td>
                             <td style="padding: 20px; border-right: 1px solid #eee; color: #800080; font-weight: 700;">주일학교 장학금 및 다음 세대 인재 양성</td>
                             <td style="padding: 20px; font-style: italic; color: #555;">"마땅히 행할 길을 아이에게 가르치라"</td>
                         </tr>
                         <tr>
                             <td style="padding: 20px; border-right: 1px solid #eee; text-align: left; padding-left: 30px; font-weight: 700;">○ 예수님 12제자 양성 사역</td>
-                            <td style="padding: 20px; border-right: 1px solid #eee;">( &nbsp;&nbsp; )</td>
                             <td style="padding: 20px; border-right: 1px solid #eee; color: #800080; font-weight: 700;">미래 목회자를 위한 신학생 장학 후원</td>
                             <td style="padding: 20px; font-style: italic; color: #555;">"내 양을 먹이라, 내 양을 치라"</td>
                         </tr>
@@ -526,7 +538,7 @@
     </section>
 
     <section id="tech" class="tech-section" style="padding-top: 40px;">
-        <h2 class="section-title">진포에버의 초격차 보존 기술</h2>
+        <h2 class="section-title">진포에버의<br>초격차 보존 기술</h2>
         <div class="card-container">
             <div class="card">
                 <h4>화학적 봉인 시스템</h4>
@@ -583,7 +595,7 @@
     </section>
 
     <section id="digital-heritage" style="background-color: var(--bg-light); padding: 50px 10% 25px 10%;">
-        <h2 class="section-title">영구 보존되는 디지털 유산 시스템</h2>
+        <h2 class="section-title">영구 보존되는<br>디지털 유산 시스템</h2>
         
         <div style="text-align: center; max-width: 900px; margin: 0 auto;">
             <p style="font-size: 1.1rem; line-height: 1.8; color: #444; margin-bottom: 30px;">
