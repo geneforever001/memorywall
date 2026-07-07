@@ -1,0 +1,26 @@
+<div style="background-color: #f4f6f9; padding: 50px; text-align: center; border-radius: 15px;">
+    <svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+        <!-- 그림자 효과 -->
+        <polygon points="70,320 620,320 720,170 170,170" fill="rgba(0, 0, 0, 0.05)" />
+
+        <!-- 아크릴 본체 (5mm 두께 베이스) -->
+        <!-- 상단 표면 -->
+        <polygon points="150,150 700,150 600,300 50,300" fill="rgba(220, 240, 255, 0.3)" stroke="rgba(150, 180, 220, 0.8)" stroke-width="2" />
+        <!-- 정면 두께 (5mm 표현) -->
+        <polygon points="50,300 600,300 600,330 50,330" fill="rgba(180, 210, 240, 0.5)" stroke="rgba(150, 180, 220, 0.8)" stroke-width="2" />
+        <!-- 우측면 두께 -->
+        <polygon points="600,300 700,150 700,180 600,330" fill="rgba(140, 180, 220, 0.4)" stroke="rgba(150, 180, 220, 0.8)" stroke-width="2" />
+
+        <!-- 파낸 홈 (1.5mm 깊이 표현) -->
+        <!-- 파낸 바닥면 -->
+        <polygon points="220,180 650,180 550,270 120,270" fill="rgba(255, 255, 255, 0.4)" stroke="rgba(100, 150, 200, 0.6)" stroke-width="1" />
+        
+        <!-- 홈의 안쪽 뒷면 벽 -->
+        <polygon points="220,180 650,180 650,190 220,190" fill="rgba(120, 160, 210, 0.6)" />
+        <!-- 홈의 안쪽 좌측 벽 -->
+        <polygon points="120,270 220,180 220,190 120,280" fill="rgba(90, 130, 190, 0.5)" />
+        
+        <!-- 빛 반사 하이라이트 (유리/아크릴 느낌 강조) -->
+        <polygon points="155,155 690,155 595,295 60,295" fill="none" stroke="rgba(255, 255, 255, 0.8)" stroke-width="1" />
+    </svg>
+</div>

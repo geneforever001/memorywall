@@ -1,0 +1,37 @@
+<div style="background-color: #f8f9fa; padding: 60px; text-align: center; border-radius: 15px;">
+    <!-- 가로 8cm, 세로 4cm 비율을 정확히 맞춘 등각투상도 SVG -->
+    <svg width="700" height="400" viewBox="0 0 750 400" xmlns="http://www.w3.org/2000/svg">
+        
+        <!-- 바닥 그림자 -->
+        <polygon points="151.4,160 428.6,320 567.1,240 290,80" fill="rgba(0,0,0,0.15)" />
+
+        <!-- 1. 아크릴 본체 윗면 (가로 8cm, 세로 4cm) 및 파낸 구멍(2.5cm x 2.5cm) -->
+        <!-- fill-rule="evenodd"를 사용하여 윗면 다각형 안에 사각형 구멍을 뚫습니다 -->
+        <path d="
+            M 300,50 L 577.1,210 L 438.6,290 L 161.4,130 Z 
+            M 317.3,80 L 230.7,130 L 317.3,180 L 403.9,130 Z" 
+            fill="#F44336" fill-rule="evenodd" stroke="#D32F2F" stroke-width="1" />
+
+        <!-- 2. 아크릴 정면 두께 (5mm = 20px) -->
+        <polygon points="161.4,130 438.6,290 438.6,310 161.4,150" fill="#D32F2F" stroke="#B71C1C" stroke-width="1" />
+
+        <!-- 3. 아크릴 우측면 두께 (5mm = 20px) -->
+        <polygon points="438.6,290 577.1,210 577.1,230 438.6,310" fill="#B71C1C" stroke="#7F0000" stroke-width="1" />
+
+        <!-- 4. 파낸 구멍의 바닥면 (깊이 2mm = 8px 아래로 이동) -->
+        <polygon points="317.3,88 403.9,138 317.3,188 230.7,138" fill="#E53935" />
+
+        <!-- 5. 파낸 구멍의 내부 오른쪽 벽 (깊이 2mm 표현) -->
+        <polygon points="317.3,80 403.9,130 403.9,138 317.3,88" fill="#B71C1C" />
+
+        <!-- 6. 파낸 구멍의 내부 왼쪽 벽 (깊이 2mm 표현, 빛이 덜 들어와 더 어둡게) -->
+        <polygon points="317.3,80 230.7,130 230.7,138 317.3,88" fill="#880E4F" />
+
+        <!-- 빛 반사 하이라이트 (아크릴 질감 표현) -->
+        <!-- 윗면 앞쪽 모서리 -->
+        <polyline points="161.4,131 437.6,289 576.1,210" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="2" />
+        <!-- 구멍 안쪽 모서리 그림자 -->
+        <polyline points="317.3,80 230.7,130 317.3,180 403.9,130" fill="none" stroke="rgba(0,0,0,0.3)" stroke-width="1" />
+        
+    </svg>
+</div>

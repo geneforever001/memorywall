@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>진포에버 | 임마누엘 기억의 전당</title>
+    <style>
+        /* 기본 스타일 및 색상 정의 */
+        :root {
+            --primary-navy: #002347;
+            --accent-gold: #C5A059;
+            --text-dark: #333;
+            --bg-light: #f8f9fa;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--white);
+        }
+
+        /* 헤더 섹션 */
+        header {
+            background-color: var(--primary-navy);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            color: var(--accent-gold);
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            margin-left: 2rem;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent-gold);
+        }
+
+        /* 메인 비주얼 (Hero) */
+        .hero {
+            height: 80vh;
+            /* 배경 이미지를 메인.jpg로 변경했습니다 */
+            background: linear-gradient(rgba(0, 35, 71, 0.6), rgba(0, 35, 71, 0.6)), 
+                        url('ChatGPT Image 2026년 4월 26일 오후 01_03_42.png') center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: var(--white);
+            text-align: center;
+            padding-top: 80px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        /* 섹션 공통 스타일 */
+        section {
+            padding: 80px 10%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            color: var(--primary-navy);
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: var(--accent-gold);
+            margin: 15px auto 0;
+        }
+
+        /* G-Code 소개 섹션 */
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .intro-text h3 {
+            color: var(--accent-gold);
+            margin-bottom: 1rem;
+        }
+
+        /* 기술적 우수성 섹션 (카드형) */
+        .tech-section {
+            background-color: var(--bg-light);
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card h4 {
+            color: var(--primary-navy);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        /* 하단 고지 사항 */
+        .disclaimer {
+            font-size: 0.85rem;
+            color: #777;
+            text-align: center;
+            padding: 20px;
+            background: #eee;
+        }
+
+        /* 푸터 */
+        footer {
+            background-color: var(--primary-navy);
+            color: var(--white);
+            padding: 40px 10%;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .intro-grid { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">GENEFOREVER</a>
+        <nav>
+            <a href="#about">G-Code 사역</a>
+            <a href="#tech">보존 기술</a>
+            <a href="#wall">기억의 벽</a>
+            <a href="#contact">문의하기</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h1>하나님이 새기신 생명의 설계도</h1>
+        <p>수십 년 사역의 헌신이 교회와 가문의 이름으로 영원히 함께합니다.<br>
+           임마누엘 생명 유산 사역, 진포에버가 성도님의 신앙을 보존합니다.</p>
+    </div>
+
+    <section id="about">
+        <h2 class="section-title">G-Code 생명 유산 사역</h2>
+        <div class="intro-grid">
+            <div class="intro-text">
+                <h3>창조주의 친필 서명, DNA</h3>
+                <p>인간이 만든 바코드가 아닌, 창조주께서 각 사람의 정체성을 담아 써 내려가신 생명의 설계도를 보존합니다. G-Code는 우리 몸속에 새겨진 하나님의 소유권 증명서이며, 이를 교회에 보관함으로써 신앙의 유산을 완성합니다.</p>
+            </div>
+            <div style="height: 300px; border-radius: 15px; overflow: hidden;">
+    <img src="0316-2.JPG" alt="DNA 생명 유산 사역" style="width: 100%; height: 100%; object-fit: cover;">
+</div>
+        </div>
+    </section>
+
+    <section id="tech" class="tech-section">
+        <h2 class="section-title">진포에버의 초격차 보존 기술</h2>
+        <div class="card-container">
+            <div class="card">
+                <h4>화학적 봉인 시스템</h4>
+                <p>혈액이나 타액 한 방울이면 됩니다. 세계적인 DNA보존 기술을 적용하였으며, DNA 파괴 효소를 잠재우고, 상온에서도 수십 년간 생생한 유지가 가능합니다.</p>
+            </div>
+<div class="card">
+    <h4>자외선 차단 황동함</h4>
+    <p>DNA의 천적인 빛과 자외선을 완벽히 차단하는 특수하게 만들어진 황동 캡슐을 사용합니다. 영구적인 보존을 위한 최적의 물리적 보호 환경을 제공합니다.</p>
+    
+    <img src="홈피-2.jpg" alt="황동 캡슐 이미지" style="width: 100%; height: auto; border-radius: 8px; margin-top: 15px;">
+</div>
+            <div class="card">
+    <h4>디지털 헤리티지 QR</h4>
+    <p>기억의 벽 보존함 명패의 QR코드를 통해 성도님의 삶의 궤적, 사진, 영상 등의 디지털 기록을, 수백년의 후손들도 우리 교회에서 언제든 열람할 수 있습니다.</p>
+    
+    <img src="홈피3.jpg" alt="디지털 헤리티지 QR 이미지" style="width: 100%; height: auto; border-radius: 8px; margin-top: 15px;">
+</div>
+    </section>
+
+    <section id="wall">
+        <h2 class="section-title">임마누엘 기억의 벽</h2>
+        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+            <p style="margin-bottom: 2rem;">교회의 유휴 공간을 품격 있는 '명예의 전당'으로 조성합니다. 교회의 규모와 요구에 따라 맞춤형 설계로 제작되며, 성도의 고착화와 교회 역사 아카이브 구축을 동시에 실현합니다.</p>
+            <div style="border: 2px solid var(--accent-gold); padding: 20px; border-radius: 10px;">
+                <p><strong>설치 사양:</strong> 12열 x 6열(144칸) / 12열 x 10열(240칸)<br>
+                <strong>설치 높이:</strong> 85cm ~ 2m (최적의 시야 확보)</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="disclaimer">
+        본 콘텐츠는 정보 제공 목적으로 작성되었으며, 의료적 또는 법적 조언을 포함하지 않습니다. 저작권을 준수하여 제작되었습니다.
+    </div>
+
+    <footer>
+        <p>&copy; 2026 GENEFOREVER (진포에버). All Rights Reserved.</p>
+        <p style="margin-top: 10px; font-size: 0.9rem; opacity: 0.7;">주소: 홈페이지에 맞게 수정하세요 | 대표: 이진흥</p>
+    </footer>
+
+</body>
+</html>
