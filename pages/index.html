@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="light">
-    <title>메인페이지 | GENE FOREVER</title>
+    <title>메인?�이지 | GENE FOREVER</title>
     <style>
-        /* 기본 스타일 및 색상 정의 (기존 기독교 홈페이지 테마 유지) */
+        /* 기본 ?��???�??�상 ?�의 (기존 기독�??�페?��? ?�마 ?��?) */
         :root {
             --primary-navy: #002347;
             --accent-gold: #C5A059;
@@ -28,7 +28,7 @@
             background-color: var(--white);
         }
 
-        /* 헤더 섹션 */
+        /* ?�더 ?�션 */
         header {
             background-color: var(--primary-navy);
             padding: 1rem 5%;
@@ -61,7 +61,7 @@
             color: var(--accent-gold);
         }
 
-        /* 메인 비주얼 (Hero) */
+        /* 메인 비주??(Hero) */
         .hero {
             width: 100%;
             padding-top: 70px; 
@@ -75,7 +75,7 @@
             display: block;
         }
 
-        /* 섹션 공통 스타일 */
+        /* ?�션 공통 ?��???*/
         section {
             padding: 80px 10%;
         }
@@ -97,7 +97,7 @@
             margin: 15px auto 0;
         }
 
-        /* 소개 그리드 */
+        /* ?�개 그리??*/
         .intro-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -111,7 +111,26 @@
             font-size: 1.5rem;
         }
 
-        /* 💡 팝업(모달) 공통 스타일 추가 */
+        .split-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .split-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .split-media {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        /* ?�� ?�업(모달) 공통 ?��???추�? */
         .modal-overlay {
             display: none;
             position: fixed;
@@ -179,7 +198,7 @@
             font-size: 1.1rem;
         }
 
-        /* 푸터 */
+        /* ?�터 */
         footer {
             background-color: var(--primary-navy);
             color: var(--white);
@@ -188,42 +207,55 @@
         }
 
         @media (max-width: 768px) {
-    /* 1. 헤더 영역을 세로(column)로 정렬하여 로고와 메뉴를 위아래로 분리 */
-    header {
-        flex-direction: column;
-        padding: 15px 5%;
-    }
-    
-    /* 2. 로고 하단 여백 추가 및 폰트 사이즈 미세조정 */
-    .logo {
-        margin-bottom: 12px;
-        font-size: 1.4rem;
-    }
-    
-    /* 3. 메뉴 링크들을 감싸서 중앙 정렬하고 겹치지 않게 gap 설정 */
-    nav {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-        width: 100%;
-    }
-    
-    /* 4. 기존 PC 버전에 있던 왼쪽 여백 제거 */
-    nav a {
-        margin-left: 0;
-    }
-    
-    /* 5. 헤더 높이가 커진 만큼 메인 이미지(hero)가 가려지지 않게 상단 여백 확보 */
-    .hero {
-        padding-top: 120px;
-    }
-    
-    /* 기존에 있던 다른 모바일 코드들(intro-grid 등)은 이 아래에 유지됩니다 */
-}
+            header {
+                flex-direction: column;
+                padding: 15px 5%;
+            }
 
-            .intro-grid { grid-template-columns: 1fr !important; }
-            .intro-grid.reverse { direction: ltr; }
+            .logo {
+                margin-bottom: 12px;
+                font-size: 1.4rem;
+            }
+
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+                width: 100%;
+            }
+
+            nav a {
+                margin-left: 0;
+            }
+
+            .hero {
+                padding-top: 120px;
+            }
+
+            section {
+                padding: 56px 5% !important;
+            }
+
+            .split-layout {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .split-text h2 {
+                font-size: 1.65rem !important;
+                margin-bottom: 16px !important;
+            }
+
+            .split-text p {
+                font-size: 1rem !important;
+                line-height: 1.7 !important;
+            }
+
+            .split-text a {
+                width: 100%;
+                text-align: center;
+            }
         }
     </style>
 </head>
@@ -232,248 +264,243 @@
     <header>
         <a href="index.html" class="logo">GENE FOREVER</a>
         <nav>
-            <a href="#home" style="color: var(--accent-gold);">메인페이지</a>
-            <a href="교회페이지.html">기억의 벽</a>
-            <a href="반려동물.html">반려동물</a>
-            <a href="DNA파크.html">DNA파크</a>
+            <a href="#home" style="color: var(--accent-gold);">메인?�이지</a>
+            <a href="교회?�이지.html">기억??�?/a>
+            <a href="반려?�물.html">반려?�물</a>
+            <a href="DNA?�크.html">DNA?�크</a>
         </nav>
     </header>
 
     <div class="hero" id="home">
-        <img src="../assets/images/브랜드dna앞부분.png" alt="차별화된 경쟁력으로 미래를 위한 가치를 제공합니다. 제네버는 살아 있을 때 DNA를 실물 형태로 보존하여 영원히 함께 할 수 있는 시스템을 설비해드립니다.">
+        <img src="../assets/images/브랜?�dna?��?�?png" alt="차별?�된 경쟁?�으�?미래�??�한 가치�? ?�공?�니?? ?�네버는 ?�아 ?�을 ??DNA�??�물 ?�태�?보존?�여 ?�원???�께 ?????�는 ?�스?�을 ?�비?�드립니??">
     </div>
 
-    <!-- 기업 소개 -->
+    <!-- 기업 ?�개 -->
 <section id="about" style="background-color: var(--white); padding: 80px 5%;">
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center;">
+        <div class="split-layout">
             
-            <div style="display: flex; flex-direction: column; justify-content: center;">
+            <div class="split-text">
                 <h2 style="font-size: 2.2rem; color: #000; margin-bottom: 25px; line-height: 1.4; font-weight: bold; word-break: keep-all;">
-                    DNA 기반 최상의 솔루션 기술집단
+                    DNA 기반 최상???�루??기술집단
                 </h2>
                 
                 <p style="font-size: 1.1rem; font-weight: bold; color: #000; margin-bottom: 15px; word-break: keep-all;">
-                    인류의 소중한 생명 정보를 영원히 잇는, DNA 기반의 최첨단 IT 기술력 보유!
+                    ?�류???�중???�명 ?�보�??�원???�는, DNA 기반??최첨??IT 기술??보유!
                 </p>
                 
                 <p style="font-size: 1.05rem; margin-bottom: 10px; line-height: 1.8; color: #333;">
-                    (주)진포에버는 생명의 근원인 DNA를 기반으로 한 '스마트 메모리얼 시스템(Smart Memorial System)'을 선도하며, 독보적인 기술력을 바탕으로 관련 분야의 특허를 출원한 바이오·IT 융합 전문 기업입니다.
+                    (�?진포?�버???�명??근원??DNA�?기반?�로 ??'?�마??메모리얼 ?�스??Smart Memorial System)'???�도?�며, ?�보?�인 기술?�을 바탕?�로 관??분야???�허�?출원??바이?�·IT ?�합 ?�문 기업?�니??
                 </p>
                 <p style="font-size: 1.05rem; margin-bottom: 10px; line-height: 1.8; color: #333;">
-                    (주)진포에버가 제공하는 서비스는 축적된 기술적 정교함과 인문학적 감성을 결합한 결과물입니다.
+                    (�?진포?�버가 ?�공?�는 ?�비?�는 축적??기술???�교?�과 ?�문?�적 감성??결합??결과물입?�다.
                 </p>
                 <p style="font-size: 1.05rem; margin-bottom: 30px; line-height: 1.8; color: #333;">
-                    우리는 고객의 소중한 유전적 자산과 삶의 궤적을 가장 안전하고 품격 있게 보존하기 위해 최상의 맞춤형 솔루션을 제공합니다.
+                    ?�리??고객???�중???�전???�산�??�의 궤적??가???�전?�고 ?�격 ?�게 보존?�기 ?�해 최상??맞춤???�루?�을 ?�공?�니??
                 </p>
                 
                 <p style="font-size: 1.1rem; font-weight: bold; color: #000; margin-top: 10px;">
-                    진포에버 임직원 일동
+                    진포?�버 ?�직???�동
                 </p>
             </div>
 
-            <div style="border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-                <img src="../assets/images/dna_image1.png" alt="DNA 기반 최상의 솔루션 이미지" style="width: 100%; height: auto; display: block;">
+            <div class="split-media">
+                <img src="../assets/images/dna_image1.png" alt="DNA 기반 최상???�루???��?지" style="width: 100%; height: auto; display: block;">
             </div>
 
         </div>
     </section>
 
-    <!-- 종교 전용 시스템 -->
+    <!-- 종교 ?�용 ?�스??-->
 <section id="religion" style="background-color: var(--bg-light); padding: 80px 5%;">
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center;">
+        <div class="split-layout">
             
-            <div style="display: flex; flex-direction: column; justify-content: center;">
+            <div class="split-text">
                 <h2 style="font-size: 2.2rem; color: #000; margin-bottom: 25px; line-height: 1.4; font-weight: bold; word-break: keep-all;">
-                    종교 전용 스마트 DNA 시스템
-                </h2>
+                    종교 ?�용 ?�마??DNA ?�스??                </h2>
                 
                 <p style="font-size: 1.1rem; font-weight: bold; color: #000; margin-bottom: 15px; word-break: keep-all;">
-                    생명의 정수와 신앙의 유산을 영원히 잇다
+                    ?�명???�수?� ?�앙???�산???�원???�다
                 </p>
                 
                 <p style="font-size: 1.05rem; margin-bottom: 10px; line-height: 1.8; color: #333;">
-                    (주)진포에버의 종교 전용 메모리얼 시스템은, 선대 성도와 수행자들의 고귀한 삶을 기록하는 '기억의 성소(Sacred Library)'를 지향하며, 각 종교의 교리와 현장 상황에 최적화된 맞춤형 헤리티지 구축 솔루션을 제공합니다.
+                    (�?진포?�버??종교 ?�용 메모리얼 ?�스?��?, ?��? ?�도?� ?�행?�들??고�????�을 기록?�는 '기억???�소(Sacred Library)'�?지?�하�? �?종교??교리?� ?�장 ?�황??최적?�된 맞춤???�리?��? 구축 ?�루?�을 ?�공?�니??
                 </p>
                 <p style="font-size: 1.05rem; margin-bottom: 10px; line-height: 1.8; color: #333;">
-                    평생을 헌신과 봉사로 정진해오신 성도님들의 유전적 정수가 담긴 DNA(G-CODE)를 최첨단 바이오 기술로 보존하고, '기억의 벽(Memory Wall)이라는 고귀한 공간을 탄생시켜, 그 안에 깃든 수행의 기록과 신앙의 고백을 디지털 콘텐츠로 통합 관리합니다.
+                    ?�생???�신�?봉사�??�진?�오???�도?�들???�전???�수가 ?�긴 DNA(G-CODE)�?최첨??바이??기술�?보존?�고, '기억??�?Memory Wall)?�라??고�???공간???�생?�켜, �??�에 깃든 ?�행??기록�??�앙??고백???��???콘텐츠로 ?�합 관리합?�다.
                 </p>
                 <p style="font-size: 1.05rem; margin-bottom: 30px; line-height: 1.8; color: #333;">
-                    황동과 크리스탈 등 고품격 소재로 제작된 보존함은 종교적 경건함을 더하며, 생명의 설계도를 영원히 안전하게 수호할 것입니다.
+                    ?�동�??�리?�탈 ??고품�??�재�??�작??보존?��? 종교??경건?�을 ?�하�? ?�명???�계?��? ?�원???�전?�게 ?�호??것입?�다.
                 </p>
                 
                 <div style="margin-top: 10px;">
-                    <a href="교회페이지.html" style="display: inline-block; background-color: var(--accent-gold); color: var(--primary-navy); padding: 12px 30px; text-decoration: none; border-radius: 8px; font-weight: bold; transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">
-                        교회 페이지 바로가기 →
-                    </a>
+                    <a href="교회?�이지.html" style="display: inline-block; background-color: var(--accent-gold); color: var(--primary-navy); padding: 12px 30px; text-decoration: none; border-radius: 8px; font-weight: bold; transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">
+                        교회 ?�이지 바로가�???                    </a>
                 </div>
             </div>
 
-            <div style="border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); background-color: #eee;">
-                <a href="교회페이지.html" style="display: block; width: 100%; height: 100%;">
-                    <img src="../assets/images/dna_image2.png" alt="종교 전용 스마트 DNA 시스템 이미지" style="width: 100%; height: auto; display: block; object-fit: cover;" onerror="this.style.display='none'; this.parentNode.innerHTML='<span style=\'color: #999; display:block; padding:40px; text-align:center;\'>이미지 (dna_image2.png)</span>'">
+            <div class="split-media" style="background-color: #eee;">
+                <a href="교회?�이지.html" style="display: block; width: 100%; height: 100%;">
+                    <img src="../assets/images/dna_image2.png" alt="종교 ?�용 ?�마??DNA ?�스???��?지" style="width: 100%; height: auto; display: block; object-fit: cover;" onerror="this.style.display='none'; this.parentNode.innerHTML='<span style=\'color: #999; display:block; padding:40px; text-align:center;\'>?��?지 (dna_image2.png)</span>'">
                 </a>
             </div>
 
         </div>
     </section>
 
-    <!-- 반려동물 전용 시스템 -->
+    <!-- 반려?�물 ?�용 ?�스??-->
 <section id="pet" style="background-color: var(--white); padding: 80px 5%;">
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center;">
+        <div class="split-layout">
             
-            <div style="display: flex; flex-direction: column; justify-content: center;">
+            <div class="split-text">
                 <h2 style="font-size: 2.2rem; color: #000; margin-bottom: 25px; line-height: 1.4; font-weight: bold; word-break: keep-all;">
-                    반려동물 전용 DNA 시스템 설비
+                    반려?�물 ?�용 DNA ?�스???�비
                 </h2>
                 
                 <p style="font-size: 1.1rem; font-weight: bold; color: #000; margin-bottom: 15px; word-break: keep-all;">
-                    영원히 교감하는 기억의 공간
+                    ?�원??교감?�는 기억??공간
                 </p>
                 
                 <p style="font-size: 1.05rem; margin-bottom: 30px; line-height: 1.8; color: #333;">
-                    DNA는 '살아있음'을 의미할 수 있습니다.<br>
-                    스마트 DNA 시스템은, 살아있을 때나 무지개 다리를 건넜을 때나, 영원히 기억하고 추억할 수 있는 시스템으로, 반려동물의 존재가 남겨져 있는 기억과 추억의 공간에 가족이 찾아와서, 사진과 영상으로 추억하며, 영원히 교감할 수 있는 시스템을 제공해 드립니다.
+                    DNA??'?�아?�음'???��??????�습?�다.<br>
+                    ?�마??DNA ?�스?��?, ?�아?�을 ?�나 무�?�??�리�?건넜???�나, ?�원??기억?�고 추억?????�는 ?�스?�으�? 반려?�물??존재가 ?�겨???�는 기억�?추억??공간??가족이 찾아?�?? ?�진�??�상?�로 추억?�며, ?�원??교감?????�는 ?�스?�을 ?�공???�립?�다.
                 </p>
                 
                 <div style="margin-top: 10px;">
-                    <a href="반려동물.html" style="display: inline-block; background-color: var(--accent-gold); color: var(--primary-navy); padding: 12px 30px; text-decoration: none; border-radius: 8px; font-weight: bold; transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">
-                        반려동물 페이지 바로가기 →
-                    </a>
+                    <a href="반려?�물.html" style="display: inline-block; background-color: var(--accent-gold); color: var(--primary-navy); padding: 12px 30px; text-decoration: none; border-radius: 8px; font-weight: bold; transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">
+                        반려?�물 ?�이지 바로가�???                    </a>
                 </div>
             </div>
 
-            <div style="border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); background-color: #eee;">
-                <a href="반려동물.html" style="display: block; width: 100%; height: 100%;">
-                    <img src="../assets/images/dna_image3.png" alt="반려동물 전용 스마트 DNA 시스템 이미지" style="width: 100%; height: auto; display: block; object-fit: cover;" onerror="this.style.display='none'; this.parentNode.innerHTML='<span style=\'color: #999; display:block; padding:40px; text-align:center;\'>이미지 (dna_image3.png)</span>'">
+            <div class="split-media" style="background-color: #eee;">
+                <a href="반려?�물.html" style="display: block; width: 100%; height: 100%;">
+                    <img src="../assets/images/dna_image3.png" alt="반려?�물 ?�용 ?�마??DNA ?�스???��?지" style="width: 100%; height: auto; display: block; object-fit: cover;" onerror="this.style.display='none'; this.parentNode.innerHTML='<span style=\'color: #999; display:block; padding:40px; text-align:center;\'>?��?지 (dna_image3.png)</span>'">
                 </a>
             </div>
 
         </div>
     </section>
 
-    <!-- DNA 파크 비전 -->
+    <!-- DNA ?�크 비전 -->
 <section id="vision" style="background-color: var(--bg-light); padding: 80px 5%;">
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center;">
+        <div class="split-layout">
             
-            <div style="display: flex; flex-direction: column; justify-content: center;">
+            <div class="split-text">
                 <h2 style="font-size: 2.2rem; color: #000; margin-bottom: 25px; line-height: 1.4; font-weight: bold; word-break: keep-all;">
-                    생명의 기록을 자연에 새기는 미래형 추모 플랫폼
-                </h2>
+                    ?�명??기록???�연???�기??미래??추모 ?�랫??                </h2>
                 
                 <p style="font-size: 1.05rem; margin-bottom: 10px; line-height: 1.8; color: #333;">
-                    (주)진포에버는 기존 장묘 문화가 가진 물리적 공간의 한계와 세대 간 정서적 단절을 극복하는 새로운 추모 패러다임을 선도합니다.
+                    (�?진포?�버??기존 ?�묘 문화가 가�?물리??공간???�계?� ?��? �??�서???�절??극복?�는 ?�로??추모 ?�러?�임???�도?�니??
                 </p>
                 <p style="font-size: 1.05rem; margin-bottom: 10px; line-height: 1.8; color: #333;">
-                    대자연의 품에 고인을 모시는 친환경 자연장림과 첨단 바이오 아카이빙 기술을 완벽하게 융합하여, 시공간을 초월해 영원히 이어지는 가족 중심의 하이브리드 추모 플랫폼을 구축·운영됩니다(2026년 11월 완공 예정)
+                    ?�?�연???�에 고인??모시??친환�??�연?�림�?첨단 바이???�카?�빙 기술???�벽?�게 ?�합?�여, ?�공간을 초월???�원???�어지??가�?중심???�이브리??추모 ?�랫?�을 구축·?�영?�니??2026??11???�공 ?�정)
                 </p>
                 <p style="font-size: 1.05rem; margin-bottom: 10px; line-height: 1.8; color: #333;">
-                    나아가 오프라인 안치에 머물지 않고, 명패에 새겨진 QR코드와 모바일 앱을 연동한 ‘스마트 DNA 뷰어’ 서비스를 함께 제공합니다.<br>
-                    스마트폰을 통해 고인의 생전 존영, 일대기 영상, 목소리 등 살아 숨 쉬는 디지털 기록을 언제 어디서나 확인하실 수 있습니다.
+                    ?�아가 ?�프?�인 ?�치??머물지 ?�고, 명패???�겨�?QR코드?� 모바???�을 ?�동???�스마트 DNA 뷰어???�비?��? ?�께 ?�공?�니??<br>
+                    ?�마?�폰???�해 고인???�전 존영, ?��?�??�상, 목소�????�아 ???�는 ?��???기록???�제 ?�디?�나 ?�인?�실 ???�습?�다.
                 </p>
                 <p style="font-size: 1.05rem; margin-bottom: 30px; line-height: 1.8; color: #333;">
-                    진포에버는 이 일상 속 디지털 추모 생태계를 통해, 가문의 신앙 유산과 추억이 다음 세대로 영원히 이어지는 고귀한 헤리티지를 완성해 가고 있습니다.
+                    진포?�버?????�상 ???��???추모 ?�태계�? ?�해, 가문의 ?�앙 ?�산�?추억???�음 ?��?�??�원???�어지??고�????�리?��?�??�성??가�??�습?�다.
                 </p>
                 
                 <div style="margin-top: 10px;">
-                    <a href="DNA파크.html" style="display: inline-block; background-color: var(--accent-gold); color: var(--primary-navy); padding: 12px 30px; text-decoration: none; border-radius: 8px; font-weight: bold; transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">
-                        DNA파크 바로가기 →
-                    </a>
+                    <a href="DNA?�크.html" style="display: inline-block; background-color: var(--accent-gold); color: var(--primary-navy); padding: 12px 30px; text-decoration: none; border-radius: 8px; font-weight: bold; transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">
+                        DNA?�크 바로가�???                    </a>
                 </div>
             </div>
 
-            <div style="border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); background-color: #eee;">
-                <a href="DNA파크.html" style="display: block; width: 100%; height: 100%;">
-                    <img src="../assets/images/memoryhall.png" alt="미래형 추모 플랫폼 이미지" style="width: 100%; height: auto; display: block; object-fit: cover;" onerror="this.style.display='none'; this.parentNode.innerHTML='<span style=\'color: #999; display:block; padding:40px; text-align:center;\'>이미지 (memoryhall.png)</span>'">
+            <div class="split-media" style="background-color: #eee;">
+                <a href="DNA?�크.html" style="display: block; width: 100%; height: 100%;">
+                    <img src="../assets/images/memoryhall.png" alt="미래??추모 ?�랫???��?지" style="width: 100%; height: auto; display: block; object-fit: cover;" onerror="this.style.display='none'; this.parentNode.innerHTML='<span style=\'color: #999; display:block; padding:40px; text-align:center;\'>?��?지 (memoryhall.png)</span>'">
                 </a>
             </div>
 
         </div>
     </section>
 
-    <!-- 💡 통일된 푸터 및 약관 팝업 연동 -->
+    <!-- ?�� ?�일???�터 �??��? ?�업 ?�동 -->
     <footer>
         <div style="display: flex; justify-content: center; align-items: center; gap: 20px; margin-bottom: 20px;">
-            <a href="index.html#about" style="color: var(--accent-gold); text-decoration: none; font-size: 0.9rem;">회사소개</a>
+            <a href="index.html#about" style="color: var(--accent-gold); text-decoration: none; font-size: 0.9rem;">?�사?�개</a>
             <span style="color: rgba(255,255,255,0.3);">|</span>
-            <a href="#" onclick="openPrivacyModal(event)" style="color: var(--accent-gold); text-decoration: none; font-size: 0.9rem;">개인정보처리방침</a>
+            <a href="#" onclick="openPrivacyModal(event)" style="color: var(--accent-gold); text-decoration: none; font-size: 0.9rem;">개인?�보처리방침</a>
             <span style="color: rgba(255,255,255,0.3);">|</span>
-            <a href="#" onclick="openTermsModal(event)" style="color: var(--accent-gold); text-decoration: none; font-size: 0.9rem;">이용약관</a>
+            <a href="#" onclick="openTermsModal(event)" style="color: var(--accent-gold); text-decoration: none; font-size: 0.9rem;">?�용?��?</a>
         </div>
-        <p style="margin-bottom: 10px; font-weight: bold;">진포에버(주) | ☎(032)822-0555(代) Fax.(0504)031-9411</p>
-        <p style="margin-bottom: 10px; font-size: 0.9rem; opacity: 0.8;">인천시 계양구 계산새로 87번길 6. 레드몰 2차 5층 504호</p>
-        <p style="margin-bottom: 20px; font-size: 0.9rem; opacity: 0.8;">기억의 벽 프랜차이즈 사업본부</p>
+        <p style="margin-bottom: 10px; font-weight: bold;">진포?�버(�? | ??032)822-0555(�? Fax.(0504)031-9411</p>
+        <p style="margin-bottom: 10px; font-size: 0.9rem; opacity: 0.8;">?�천??계양�?계산?�로 87번길 6. ?�드�?2�?5�?504??/p>
+        <p style="margin-bottom: 20px; font-size: 0.9rem; opacity: 0.8;">기억??�??�랜차이�??�업본�?</p>
         <p style="font-size: 0.85rem; opacity: 0.6;">All rights reserved.</p>
     </footer>
 
-    <!-- 💡 개인정보처리방침 모달 -->
+    <!-- ?�� 개인?�보처리방침 모달 -->
     <div id="privacyModal" class="modal-overlay">
         <div class="modal-content">
             <span class="modal-close" onclick="closePrivacyModal()">&times;</span>
-            <h2 style="color: var(--primary-navy); margin-bottom: 20px; text-align: center;">개인정보처리방침</h2>
+            <h2 style="color: var(--primary-navy); margin-bottom: 20px; text-align: center;">개인?�보처리방침</h2>
             <div class="modal-body">
-                <p><strong>진포에버(주)</strong>(이하 '회사'라 한다)는 개인정보 보호법 제30조에 따라 정보주체의 개인정보를 보호하고 이와 관련한 고충을 신속하고 원활하게 처리할 수 있도록 하기 위하여 다음과 같이 개인정보 처리방침을 수립·공개합니다.</p>
-                <h4 style="color: var(--primary-navy); margin-top: 25px; margin-bottom: 10px; font-size: 1.1rem;">제1조(개인정보의 처리 목적)</h4>
-                <p>회사는 다음의 목적을 위하여 개인정보를 처리합니다. 처리하고 있는 개인정보는 다음의 목적 이외의 용도로는 이용되지 않으며 이용 목적이 변경되는 경우에는 개인정보 보호법 제18조에 따라 별도의 동의를 받는 등 필요한 조치를 이행할 예정입니다.<br>
-                1. 홈페이지 회원가입 및 관리<br>
-                2. 재화 또는 서비스 제공<br>
-                3. 마케팅 및 광고에의 활용</p>
-                <h4 style="color: var(--primary-navy); margin-top: 25px; margin-bottom: 10px; font-size: 1.1rem;">제2조(개인정보의 처리 및 보유 기간)</h4>
-                <p>① 회사는 법령에 따른 개인정보 보유·이용기간 또는 정보주체로부터 개인정보를 수집 시에 동의받은 개인정보 보유·이용기간 내에서 개인정보를 처리·보유합니다.<br>
-                ② 각각의 개인정보 처리 및 보유 기간은 다음과 같습니다.<br>
-                1. 홈페이지 회원가입 및 관리 : 사업자/단체 홈페이지 탈퇴시까지<br>
-                2. 재화 또는 서비스 제공 : 재화·서비스 공급완료 및 요금결제·정산 완료시까지</p>
-                <h4 style="color: var(--primary-navy); margin-top: 25px; margin-bottom: 10px; font-size: 1.1rem;">제3조(정보주체와 법정대리인의 권리·의무 및 그 행사방법)</h4>
-                <p>① 정보주체는 회사에 대해 언제든지 개인정보 열람·정정·삭제·처리정지 요구 등의 권리를 행사할 수 있습니다.<br>
-                ② 제1항에 따른 권리 행사는 회사에 대해 개인정보 보호법 시행령 제41조제1항에 따라 서면, 전자우편, 모사전송(FAX) 등을 통하여 하실 수 있으며 회사는 이에 대해 지체 없이 조치하겠습니다.</p>
-                <h4 style="color: var(--primary-navy); margin-top: 25px; margin-bottom: 10px; font-size: 1.1rem;">제4조(처리하는 개인정보의 항목 작성)</h4>
-                <p>회사는 다음의 개인정보 항목을 처리하고 있습니다.<br>
-                - 필수항목 : 성명, 생년월일, 아이디, 비밀번호, 주소, 전화번호, 성별, 이메일, 신앙 정보(소속 교회 등)<br>
-                - 선택항목 : 직업, 가족관계</p>
-                <h4 style="color: var(--primary-navy); margin-top: 25px; margin-bottom: 10px; font-size: 1.1rem;">제5조(개인정보의 파기)</h4>
-                <p>회사는 원칙적으로 개인정보 처리목적이 달성된 경우에는 지체없이 해당 개인정보 파기합니다. 파기의 절차, 기한 및 방법은 다음과 같습니다.<br>
-                - 파기절차: 이용자가 입력한 정보는 목적 달성 후 별도의 DB에 옮겨져 내부 방침 및 기타 관련 법령에 따라 일정기간 저장된 후 혹은 즉시 파기됩니다.<br>
-                - 파기방법: 전자적 파일 형태의 정보는 기록을 재생할 수 없는 기술적 방법을 사용합니다.</p>
-                <h4 style="color: var(--primary-navy); margin-top: 25px; margin-bottom: 10px; font-size: 1.1rem;">제6조(개인정보 보호책임자)</h4>
-                <p>회사는 개인정보 처리에 관한 업무를 총괄해서 책임지고, 개인정보 처리와 관련한 정보주체의 불만처리 및 피해구제 등을 위하여 아래와 같이 개인정보 보호책임자를 지정하고 있습니다.<br>
-                ▶ 개인정보 보호책임자<br>
-                성명 : OOO<br>
+                <p><strong>진포?�버(�?</strong>(?�하 '?�사'???�다)??개인?�보 보호�???0조에 ?�라 ?�보주체??개인?�보�?보호?�고 ?��? 관?�한 고충???�속?�고 ?�활?�게 처리?????�도�??�기 ?�하???�음�?같이 개인?�보 처리방침???�립·공개?�니??</p>
+                <h4 style="color: var(--primary-navy); margin-top: 25px; margin-bottom: 10px; font-size: 1.1rem;">??�?개인?�보??처리 목적)</h4>
+                <p>?�사???�음??목적???�하??개인?�보�?처리?�니?? 처리?�고 ?�는 개인?�보???�음??목적 ?�외???�도로는 ?�용?��? ?�으�??�용 목적??변경되??경우?�는 개인?�보 보호�???8조에 ?�라 별도???�의�?받는 ???�요??조치�??�행???�정?�니??<br>
+                1. ?�페?��? ?�원가??�?관�?br>
+                2. ?�화 ?�는 ?�비???�공<br>
+                3. 마�???�?광고?�의 ?�용</p>
+                <h4 style="color: var(--primary-navy); margin-top: 25px; margin-bottom: 10px; font-size: 1.1rem;">??�?개인?�보??처리 �?보유 기간)</h4>
+                <p>???�사??법령???�른 개인?�보 보유·?�용기간 ?�는 ?�보주체로�???개인?�보�??�집 ?�에 ?�의받�? 개인?�보 보유·?�용기간 ?�에??개인?�보�?처리·보유?�니??<br>
+                ??각각??개인?�보 처리 �?보유 기간?� ?�음�?같습?�다.<br>
+                1. ?�페?��? ?�원가??�?관�?: ?�업???�체 ?�페?��? ?�퇴?�까지<br>
+                2. ?�화 ?�는 ?�비???�공 : ?�화·?�비??공급?�료 �??�금결제·?�산 ?�료?�까지</p>
+                <h4 style="color: var(--primary-navy); margin-top: 25px; margin-bottom: 10px; font-size: 1.1rem;">??�??�보주체?� 법정?�리인??권리·?�무 �?�??�사방법)</h4>
+                <p>???�보주체???�사???�???�제?��? 개인?�보 ?�람·?�정·??��·처리?��? ?�구 ?�의 권리�??�사?????�습?�다.<br>
+                ??????�� ?�른 권리 ?�사???�사???�??개인?�보 보호�??�행????1조제1??�� ?�라 ?�면, ?�자?�편, 모사?�송(FAX) ?�을 ?�하???�실 ???�으�??�사???�에 ?�??지�??�이 조치?�겠?�니??</p>
+                <h4 style="color: var(--primary-navy); margin-top: 25px; margin-bottom: 10px; font-size: 1.1rem;">??�?처리?�는 개인?�보????�� ?�성)</h4>
+                <p>?�사???�음??개인?�보 ??��??처리?�고 ?�습?�다.<br>
+                - ?�수??�� : ?�명, ?�년?�일, ?�이?? 비�?번호, 주소, ?�화번호, ?�별, ?�메?? ?�앙 ?�보(?�속 교회 ??<br>
+                - ?�택??�� : 직업, 가족�?�?/p>
+                <h4 style="color: var(--primary-navy); margin-top: 25px; margin-bottom: 10px; font-size: 1.1rem;">??�?개인?�보???�기)</h4>
+                <p>?�사???�칙?�으�?개인?�보 처리목적???�성??경우?�는 지체없???�당 개인?�보 ?�기?�니?? ?�기???�차, 기한 �?방법?� ?�음�?같습?�다.<br>
+                - ?�기?�차: ?�용?��? ?�력???�보??목적 ?�성 ??별도??DB????��???��? 방침 �?기�? 관??법령???�라 ?�정기간 ?�?�된 ???��? 즉시 ?�기?�니??<br>
+                - ?�기방법: ?�자???�일 ?�태???�보??기록???�생?????�는 기술??방법???�용?�니??</p>
+                <h4 style="color: var(--primary-navy); margin-top: 25px; margin-bottom: 10px; font-size: 1.1rem;">??�?개인?�보 보호책임??</h4>
+                <p>?�사??개인?�보 처리??관???�무�?총괄?�서 책임지�? 개인?�보 처리?� 관?�한 ?�보주체??불만처리 �??�해구제 ?�을 ?�하???�래?� 같이 개인?�보 보호책임?��? 지?�하�??�습?�다.<br>
+                ??개인?�보 보호책임??br>
+                ?�명 : OOO<br>
                 직책 : OOO<br>
-                연락처 : 032-822-0555, email@geneforever.com</p>
+                ?�락�?: 032-822-0555, email@geneforever.com</p>
             </div>
         </div>
     </div>
 
-    <!-- 💡 이용약관 모달 -->
+    <!-- ?�� ?�용?��? 모달 -->
     <div id="termsModal" class="modal-overlay">
         <div class="modal-content">
             <span class="modal-close" onclick="closeTermsModal()">&times;</span>
-            <h2 style="color: var(--primary-navy); margin-bottom: 20px; text-align: center;">이용약관</h2>
+            <h2 style="color: var(--primary-navy); margin-bottom: 20px; text-align: center;">?�용?��?</h2>
             <div class="modal-body">
-                <p><strong>진포에버(주)</strong>(이하 '회사'라 합니다)의 서비스 이용약관은 다음과 같습니다.</p>
-                <h4 style="color: var(--primary-navy); margin-top: 25px; margin-bottom: 10px; font-size: 1.1rem;">제1조 (목적)</h4>
-                <p>본 약관은 회사가 제공하는 스마트 메모리얼 시스템(DNA 보존 및 디지털 아카이브) 및 관련 제반 서비스의 이용과 관련하여 회사와 회원 간의 권리, 의무 및 책임사항, 기타 필요한 사항을 규정함을 목적으로 합니다.</p>
-                <h4 style="color: var(--primary-navy); margin-top: 25px; margin-bottom: 10px; font-size: 1.1rem;">제2조 (서비스의 제공)</h4>
-                <p>회사는 다음과 같은 서비스를 제공합니다.<br>
-                1. DNA 및 생체정보(케라틴 등)의 추출 및 보존 서비스<br>
-                2. 디지털 데이터(사진, 영상, 약력 등)의 아카이빙 및 스마트 뷰어 서비스<br>
-                3. 기타 회사가 추가 개발하거나 제휴계약 등을 통해 회원에게 제공하는 일체의 서비스</p>
-                <h4 style="color: var(--primary-navy); margin-top: 25px; margin-bottom: 10px; font-size: 1.1rem;">제3조 (이용계약의 체결)</h4>
-                <p>① 이용계약은 회원이 되고자 하는 자가 본 약관의 내용에 대하여 동의를 한 다음 서비스 가입 및 이용 신청을 하고 회사가 이러한 신청에 대하여 승낙함으로써 체결됩니다.<br>
-                ② 회사는 허위 정보 기재, 부정한 목적의 신청 등 상당한 이유가 있는 경우 승낙을 유보하거나 거절할 수 있습니다.</p>
-                <h4 style="color: var(--primary-navy); margin-top: 25px; margin-bottom: 10px; font-size: 1.1rem;">제4조 (회원의 의무)</h4>
-                <p>① 회원은 관계법령, 본 약관의 규정, 이용안내 및 서비스와 관련하여 공지한 주의사항 등을 준수하여야 하며, 기타 회사의 업무에 방해되는 행위를 하여서는 안 됩니다.<br>
-                ② 회원은 제공받은 계정 및 접속 QR코드(또는 인증 정보)를 제3자에게 양도, 대여할 수 없으며, 이에 대한 관리 책임은 회원에게 있습니다.</p>
-                <h4 style="color: var(--primary-navy); margin-top: 25px; margin-bottom: 10px; font-size: 1.1rem;">제5조 (계약 해지 및 환불)</h4>
-                <p>① 회원은 언제든지 서비스 이용계약 해지를 신청할 수 있으며, 회사는 관련 법령이 정하는 바에 따라 이를 즉시 처리하여야 합니다.<br>
-                ② DNA 보존 작업이 개시된 이후에는 작업 특성상 실비용이 공제된 후 환불되거나 환불이 제한될 수 있으며, 상세한 환불 규정은 별도의 서비스 계약서에 따릅니다.</p>
-                <h4 style="color: var(--primary-navy); margin-top: 25px; margin-bottom: 10px; font-size: 1.1rem;">제6조 (면책 조항)</h4>
-                <p>① 회사는 천재지변 또는 이에 준하는 불가항력으로 인하여 서비스를 제공할 수 없는 경우에는 서비스 제공에 관한 책임이 면제됩니다.<br>
-                ② 회사는 회원의 귀책사유로 인한 서비스 이용의 장애에 대하여는 책임을 지지 않습니다.</p>
+                <p><strong>진포?�버(�?</strong>(?�하 '?�사'???�니?????�비???�용?��??� ?�음�?같습?�다.</p>
+                <h4 style="color: var(--primary-navy); margin-top: 25px; margin-bottom: 10px; font-size: 1.1rem;">??�?(목적)</h4>
+                <p>�??��??� ?�사가 ?�공?�는 ?�마??메모리얼 ?�스??DNA 보존 �??��????�카?�브) �?관???�반 ?�비?�의 ?�용�?관?�하???�사?� ?�원 간의 권리, ?�무 �?책임?�항, 기�? ?�요???�항??규정?�을 목적?�로 ?�니??</p>
+                <h4 style="color: var(--primary-navy); margin-top: 25px; margin-bottom: 10px; font-size: 1.1rem;">??�?(?�비?�의 ?�공)</h4>
+                <p>?�사???�음�?같�? ?�비?��? ?�공?�니??<br>
+                1. DNA �??�체?�보(케?�틴 ????추출 �?보존 ?�비??br>
+                2. ?��????�이???�진, ?�상, ?�력 ?????�카?�빙 �??�마??뷰어 ?�비??br>
+                3. 기�? ?�사가 추�? 개발?�거???�휴계약 ?�을 ?�해 ?�원?�게 ?�공?�는 ?�체???�비??/p>
+                <h4 style="color: var(--primary-navy); margin-top: 25px; margin-bottom: 10px; font-size: 1.1rem;">??�?(?�용계약??체결)</h4>
+                <p>???�용계약?� ?�원???�고???�는 ?��? �??��????�용???�?�여 ?�의�????�음 ?�비??가??�??�용 ?�청???�고 ?�사가 ?�러???�청???�?�여 ?�낙?�으로써 체결?�니??<br>
+                ???�사???�위 ?�보 기재, 부?�한 목적???�청 ???�당???�유가 ?�는 경우 ?�낙???�보?�거??거절?????�습?�다.</p>
+                <h4 style="color: var(--primary-navy); margin-top: 25px; margin-bottom: 10px; font-size: 1.1rem;">??�?(?�원???�무)</h4>
+                <p>???�원?� 관계법?? �??��???규정, ?�용?�내 �??�비?��? 관?�하??공�???주의?�항 ?�을 준?�하?�야 ?�며, 기�? ?�사???�무??방해?�는 ?�위�??�여?�는 ???�니??<br>
+                ???�원?� ?�공받�? 계정 �??�속 QR코드(?�는 ?�증 ?�보)�????�에�??�도, ?�?�할 ???�으�? ?�에 ?�??관�?책임?� ?�원?�게 ?�습?�다.</p>
+                <h4 style="color: var(--primary-navy); margin-top: 25px; margin-bottom: 10px; font-size: 1.1rem;">??�?(계약 ?��? �??�불)</h4>
+                <p>???�원?� ?�제?��? ?�비???�용계약 ?��?�??�청?????�으�? ?�사??관??법령???�하??바에 ?�라 ?��? 즉시 처리?�여???�니??<br>
+                ??DNA 보존 ?�업??개시???�후?�는 ?�업 ?�성???�비?�이 공제?????�불?�거???�불???�한?????�으�? ?�세???�불 규정?� 별도???�비??계약?�에 ?�릅?�다.</p>
+                <h4 style="color: var(--primary-navy); margin-top: 25px; margin-bottom: 10px; font-size: 1.1rem;">??�?(면책 조항)</h4>
+                <p>???�사??천재지변 ?�는 ?�에 준?�는 불�???��?�로 ?�하???�비?��? ?�공?????�는 경우?�는 ?�비???�공??관??책임??면제?�니??<br>
+                ???�사???�원??귀책사?�로 ?�한 ?�비???�용???�애???�?�여??책임??지지 ?�습?�다.</p>
             </div>
         </div>
     </div>
 
-    <!-- 💡 스크립트 영역 (두 개의 팝업 기능 모두 통합) -->
+    <!-- ?�� ?�크립트 ?�역 (??개의 ?�업 기능 모두 ?�합) -->
     <script>
         const privacyModal = document.getElementById('privacyModal');
         
@@ -501,7 +528,7 @@
             setTimeout(() => { termsModal.style.display = 'none'; }, 300); 
         }
 
-        // 모달창 바깥쪽 어두운 배경 클릭 시 두 팝업 모두 닫기 적용
+        // 모달�?바깥�??�두??배경 ?�릭 ?????�업 모두 ?�기 ?�용
         window.addEventListener('click', (event) => {
             if (event.target === privacyModal) {
                 closePrivacyModal();
