@@ -109,6 +109,89 @@
             margin-right: auto;
         }
 
+        /* 대표 이미지와 재생 버튼을 보여주는 소개 영상 */
+        .featured-video-block {
+            max-width: 1100px;
+            margin: 0 auto 65px;
+            text-align: center;
+        }
+
+        .featured-video-block h2 {
+            color: var(--primary-navy);
+            font-size: 2.2rem;
+            margin-bottom: 12px;
+            word-break: keep-all;
+        }
+
+        .featured-video-block > p {
+            color: #666;
+            font-size: 1.05rem;
+            margin: 0 auto 28px;
+            max-width: 760px;
+            word-break: keep-all;
+        }
+
+        .featured-video-shell {
+            position: relative;
+            overflow: hidden;
+            border-radius: 18px;
+            background: #071c32;
+            box-shadow: 0 14px 36px rgba(0, 35, 71, 0.16);
+        }
+
+        .featured-video {
+            display: block;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            background: #071c32;
+            object-fit: contain;
+        }
+
+        .featured-video-play {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 24px;
+            border: 2px solid rgba(255,255,255,0.75);
+            border-radius: 999px;
+            background: rgba(0, 35, 71, 0.88);
+            color: #fff;
+            font-size: 1.05rem;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.28);
+            transition: transform 0.2s ease, background 0.2s ease;
+        }
+
+        .featured-video-play:hover {
+            transform: translate(-50%, -50%) scale(1.04);
+            background: rgba(197, 160, 89, 0.96);
+        }
+
+        .featured-video-play:focus-visible {
+            outline: 3px solid #fff;
+            outline-offset: 3px;
+        }
+
+        .featured-video-play[hidden] {
+            display: none;
+        }
+
+        .featured-video-play-icon {
+            font-size: 1.35rem;
+            line-height: 1;
+        }
+
+        .featured-video-note {
+            margin-top: 14px !important;
+            color: #777 !important;
+            font-size: 0.92rem !important;
+        }
+
         .quick-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -639,6 +722,28 @@
             <span class="highlight-badge">
                 조상과 가문의 DNA와 디지털 자산을 후손까지 잇는 보존 파크
             </span>
+        </div>
+
+        <div class="featured-video-block" aria-labelledby="dna-park-video-title">
+            <h2 id="dna-park-video-title">일영 DNA파크·수목장림 소개</h2>
+            <p>자연 속 추모 공간과 DNA 보존 시스템이 함께 이어지는 일영 DNA파크의 모습을 확인해 보세요.</p>
+            <div class="featured-video-shell">
+                <video class="featured-video" controls preload="none" playsinline
+                       poster="../assets/images/dnapark1.png"
+                       aria-label="일영 DNA파크와 수목장림 소개 영상"
+                       onplay="this.nextElementSibling.hidden=true"
+                       onended="this.nextElementSibling.hidden=false; this.load()">
+                    <source src="../assets/videos/ilyeong-dna-park.mp4" type="video/mp4">
+                    사용 중인 브라우저에서는 영상을 재생할 수 없습니다.
+                </video>
+                <button class="featured-video-play" type="button"
+                        onclick="this.previousElementSibling.play()"
+                        aria-label="일영 DNA파크와 수목장림 소개 영상 재생">
+                    <span class="featured-video-play-icon" aria-hidden="true">▶</span>
+                    <span>영상 보기</span>
+                </button>
+            </div>
+            <p class="featured-video-note">대표 이미지의 재생 버튼을 누르면 영상이 시작됩니다.</p>
         </div>
 
         <div style="text-align: center; margin-bottom: 40px; max-width: 1200px; margin-left: auto; margin-right: auto; padding: 0 15px;">

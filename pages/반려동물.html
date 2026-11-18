@@ -130,6 +130,88 @@
             margin-right: auto;
         }
 
+        /* 대표 이미지와 재생 버튼을 보여주는 소개 영상 */
+        .featured-video-block {
+            max-width: 1100px;
+            margin: 65px auto 0;
+            text-align: center;
+        }
+
+        .featured-video-block h3 {
+            color: var(--primary-navy);
+            font-size: 2rem;
+            margin-bottom: 12px;
+            word-break: keep-all;
+        }
+
+        .featured-video-block > p {
+            color: #666;
+            font-size: 1.05rem;
+            margin: 0 auto 28px;
+            max-width: 760px;
+        }
+
+        .featured-video-shell {
+            position: relative;
+            overflow: hidden;
+            border-radius: 18px;
+            background: #071c32;
+            box-shadow: 0 14px 36px rgba(0, 35, 71, 0.16);
+        }
+
+        .featured-video {
+            display: block;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            background: #071c32;
+            object-fit: contain;
+        }
+
+        .featured-video-play {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 24px;
+            border: 2px solid rgba(255,255,255,0.75);
+            border-radius: 999px;
+            background: rgba(0, 35, 71, 0.88);
+            color: #fff;
+            font-size: 1.05rem;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.28);
+            transition: transform 0.2s ease, background 0.2s ease;
+        }
+
+        .featured-video-play:hover {
+            transform: translate(-50%, -50%) scale(1.04);
+            background: rgba(197, 160, 89, 0.96);
+        }
+
+        .featured-video-play:focus-visible {
+            outline: 3px solid #fff;
+            outline-offset: 3px;
+        }
+
+        .featured-video-play[hidden] {
+            display: none;
+        }
+
+        .featured-video-play-icon {
+            font-size: 1.35rem;
+            line-height: 1;
+        }
+
+        .featured-video-note {
+            margin-top: 14px !important;
+            color: #777 !important;
+            font-size: 0.92rem !important;
+        }
+
         .hero-highlights {
             display: flex;
             flex-wrap: wrap;
@@ -554,6 +636,28 @@
                 <h4>왜 의미가 있나요?</h4>
                 <p>시간이 지난 뒤에도 가족이 다시 보고 느끼고 기억할 수 있는 실제 흔적과 추억을 남길 수 있습니다.</p>
             </div>
+        </div>
+
+        <div class="featured-video-block" aria-labelledby="pet-heritage-video-title">
+            <h3 id="pet-heritage-video-title">반려동물 헤리티지관 소개</h3>
+            <p>우리 아이의 생명 기록과 추억을 품는 헤리티지관이 만들어지는 모습을 영상으로 만나보세요.</p>
+            <div class="featured-video-shell">
+                <video class="featured-video" controls preload="none" playsinline
+                       poster="../assets/images/petmemorywall.png"
+                       aria-label="반려동물 헤리티지관 소개 영상"
+                       onplay="this.nextElementSibling.hidden=true"
+                       onended="this.nextElementSibling.hidden=false; this.load()">
+                    <source src="../assets/videos/pet-heritage.mp4" type="video/mp4">
+                    사용 중인 브라우저에서는 영상을 재생할 수 없습니다.
+                </video>
+                <button class="featured-video-play" type="button"
+                        onclick="this.previousElementSibling.play()"
+                        aria-label="반려동물 헤리티지관 소개 영상 재생">
+                    <span class="featured-video-play-icon" aria-hidden="true">▶</span>
+                    <span>영상 보기</span>
+                </button>
+            </div>
+            <p class="featured-video-note">대표 이미지의 재생 버튼을 누르면 영상이 시작됩니다.</p>
         </div>
     </section>
 
