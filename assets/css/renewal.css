@@ -244,6 +244,73 @@ body.page-dna .hero img {
 .trust-item strong { display: block; font-size: 1rem; line-height: 1.35; }
 .trust-item span:last-child { display: block; margin-top: 2px; color: #65777a; font-size: .84rem; line-height: 1.45; }
 
+.religion-switch {
+    padding: 34px max(5vw, 24px) !important;
+    background: var(--renewal-paper) !important;
+}
+
+.religion-switch-grid {
+    width: min(920px, 100%);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.religion-switch-card {
+    min-height: 98px;
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    color: var(--renewal-ink) !important;
+    background: #fff;
+    border: 1px solid var(--renewal-line);
+    border-radius: 18px;
+    box-shadow: var(--renewal-shadow-soft);
+    text-decoration: none;
+}
+
+.religion-switch-card strong {
+    display: block;
+    color: var(--renewal-navy);
+    font-size: 1.08rem;
+}
+
+.religion-switch-card span {
+    display: block;
+    margin-top: 3px;
+    color: #68797c;
+    font-size: .9rem;
+}
+
+.religion-switch-card.active {
+    color: #fff !important;
+    background: var(--renewal-navy);
+    border-color: var(--renewal-navy);
+}
+
+.religion-switch-card.active strong,
+.religion-switch-card.active span { color: #fff; }
+
+.religion-switch-card::after {
+    content: "보기";
+    flex: 0 0 auto;
+    padding: 7px 11px;
+    color: var(--renewal-navy);
+    background: var(--renewal-gold-soft);
+    border-radius: 999px;
+    font-size: .78rem;
+    font-weight: 750;
+}
+
+.religion-switch-card.active::after {
+    content: "현재 페이지";
+    color: #fff;
+    background: rgba(255,255,255,.14);
+}
+
 body.renewal section {
     position: relative;
     padding: clamp(72px, 8vw, 112px) max(5vw, 24px) !important;
@@ -611,6 +678,8 @@ body.renewal .modal-content {
     body.renewal .featured-video-shell { border-radius: 14px !important; }
     body.renewal .comparison-container { overflow-x: auto; }
     body.renewal .comparison-table { min-width: 720px; }
+    .religion-switch-grid { grid-template-columns: 1fr; }
+    .religion-switch-card { min-height: 86px; padding: 17px 18px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
