@@ -427,7 +427,7 @@
             .hero h1 { font-size: 2rem; }
         }
     </style>
-    <link rel="stylesheet" href="../assets/css/renewal.css">
+    <link rel="stylesheet" href="../assets/css/renewal.css?v=20261122">
 </head>
 <body class="renewal page-church">
 
@@ -435,7 +435,13 @@
         <a href="index.html" class="logo">GENE FOREVER</a>
         <nav>
             <a href="index.html">메인페이지</a>
-            <a href="교회페이지.html" style="color: var(--accent-gold);">기억의 벽</a>
+            <details class="nav-memory">
+                <summary>기억의 벽</summary>
+                <div class="nav-memory-menu">
+                    <a href="교회페이지.html" aria-current="page">교회 기억의 벽</a>
+                    <a href="사찰페이지.html">사찰 기억의 벽</a>
+                </div>
+            </details>
             <a href="반려동물.html">반려동물</a>
             <a href="DNA파크.html">DNA파크</a>
         </nav>
@@ -450,17 +456,6 @@
             <span class="hero-chip">후손을 위한 디지털 추억관</span>
         </div>
     </div>
-
-    <section class="religion-switch" aria-label="종교별 기억의 벽 선택">
-        <div class="religion-switch-grid">
-            <a class="religion-switch-card active" href="교회페이지.html" aria-current="page">
-                <span><strong>교회 기억의 벽</strong><span>삶과 신앙의 기록을 이어갑니다</span></span>
-            </a>
-            <a class="religion-switch-card" href="사찰페이지.html">
-                <span><strong>사찰 기억의 벽</strong><span>인연과 수행의 흔적을 이어갑니다</span></span>
-            </a>
-        </div>
-    </section>
 
     <section id="about">
         <h2 class="section-title">기억의 벽은 어떤 사역인가요?</h2>

@@ -92,6 +92,64 @@ body.renewal header nav a {
     transition: color .2s ease, background .2s ease, border-color .2s ease;
 }
 
+body.renewal header nav .nav-memory {
+    position: relative;
+    flex: 0 0 auto;
+}
+
+body.renewal header nav .nav-memory summary {
+    padding: 10px 15px;
+    color: rgba(255,255,255,.78);
+    border: 1px solid transparent;
+    border-radius: 999px;
+    font-size: .96rem;
+    font-weight: 650;
+    cursor: pointer;
+    list-style: none;
+    transition: color .2s ease, background .2s ease, border-color .2s ease;
+}
+
+body.renewal header nav .nav-memory summary::-webkit-details-marker { display: none; }
+
+body.renewal header nav .nav-memory summary:hover,
+body.renewal header nav .nav-memory[open] summary,
+body.page-church header nav .nav-memory summary,
+body.page-temple header nav .nav-memory summary {
+    color: #fff;
+    background: rgba(255,255,255,.1);
+    border-color: rgba(244, 221, 183, .38);
+}
+
+body.renewal header nav .nav-memory-menu {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 50%;
+    z-index: 1100;
+    display: grid;
+    min-width: 190px;
+    padding: 8px;
+    gap: 4px;
+    transform: translateX(-50%);
+    background: #17363a;
+    border: 1px solid rgba(244, 221, 183, .32);
+    border-radius: 16px;
+    box-shadow: 0 16px 36px rgba(0,0,0,.28);
+}
+
+body.renewal header nav .nav-memory-menu a {
+    display: block;
+    padding: 11px 13px !important;
+    border-radius: 11px;
+    font-size: .9rem;
+    white-space: nowrap;
+}
+
+body.renewal header nav .nav-memory-menu a:hover {
+    color: #17363a !important;
+    background: #f4ddb7;
+    border-color: #f4ddb7;
+}
+
 body.renewal header nav a:hover,
 body.page-home header nav a[href="#home"],
 body.page-church header nav a[href="교회페이지.html"],
@@ -618,13 +676,15 @@ body.renewal .modal-content {
     body.renewal header nav {
         width: 100%;
         justify-content: flex-start;
-        overflow-x: auto;
+        overflow: visible;
         padding: 4px 0 2px;
         scrollbar-width: none;
     }
 
     body.renewal header nav::-webkit-scrollbar { display: none; }
     body.renewal header nav a { flex: 0 0 auto; padding: 8px 12px !important; font-size: .86rem; }
+    body.renewal header nav .nav-memory summary { padding: 8px 12px; font-size: .86rem; white-space: nowrap; }
+    body.renewal header nav .nav-memory-menu { left: 0; transform: none; }
 
     body.renewal .hero {
         min-height: 540px;
