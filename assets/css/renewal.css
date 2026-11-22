@@ -98,11 +98,11 @@ body.renewal header nav .nav-memory {
 }
 
 body.renewal header nav .nav-memory summary {
-    padding: 10px 15px;
+    padding: 9px 14px;
     color: rgba(255,255,255,.78);
     border: 1px solid transparent;
     border-radius: 999px;
-    font-size: .96rem;
+    font-size: .92rem;
     font-weight: 650;
     cursor: pointer;
     list-style: none;
@@ -122,26 +122,30 @@ body.page-temple header nav .nav-memory summary {
 
 body.renewal header nav .nav-memory-menu {
     position: absolute;
-    top: calc(100% + 10px);
+    top: calc(100% + 7px);
     left: 50%;
     z-index: 1100;
-    display: grid;
-    min-width: 190px;
-    padding: 8px;
-    gap: 4px;
+    display: flex;
+    width: max-content;
+    min-width: 0;
+    padding: 0;
+    gap: 6px;
     transform: translateX(-50%);
-    background: #17363a;
-    border: 1px solid rgba(244, 221, 183, .32);
-    border-radius: 16px;
-    box-shadow: 0 16px 36px rgba(0,0,0,.28);
+    background: transparent;
+    border: 0;
+    box-shadow: none;
 }
 
 body.renewal header nav .nav-memory-menu a {
     display: block;
-    padding: 11px 13px !important;
-    border-radius: 11px;
-    font-size: .9rem;
+    padding: 7px 10px !important;
+    color: rgba(255,255,255,.9) !important;
+    background: #17363a;
+    border: 1px solid rgba(244, 221, 183, .32);
+    border-radius: 999px;
+    font-size: .875rem;
     white-space: nowrap;
+    box-shadow: 0 8px 20px rgba(0,0,0,.2);
 }
 
 body.renewal header nav .nav-memory-menu a:hover {
@@ -515,6 +519,34 @@ body.renewal .card p,
 body.renewal .step-card p,
 body.renewal .process-step p { color: #5a6a6d !important; }
 
+body.page-church .quick-grid,
+body.page-temple .quick-grid {
+    width: min(880px, 100%);
+    margin: 28px auto 0;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px !important;
+}
+
+body.page-church .quick-card,
+body.page-temple .quick-card {
+    padding: 18px 17px !important;
+    border-radius: 16px !important;
+    text-align: left;
+}
+
+body.page-church .quick-card h4,
+body.page-temple .quick-card h4 {
+    margin-bottom: 7px;
+    font-size: 1rem !important;
+}
+
+body.page-church .quick-card p,
+body.page-temple .quick-card p {
+    font-size: .9rem;
+    line-height: 1.55;
+}
+
 body.renewal .card-icon,
 body.renewal .step-number {
     color: var(--renewal-navy) !important;
@@ -684,7 +716,7 @@ body.renewal .modal-content {
     body.renewal header nav::-webkit-scrollbar { display: none; }
     body.renewal header nav a { flex: 0 0 auto; padding: 8px 12px !important; font-size: .86rem; }
     body.renewal header nav .nav-memory summary { padding: 8px 12px; font-size: .86rem; white-space: nowrap; }
-    body.renewal header nav .nav-memory-menu { left: 0; transform: none; }
+    body.renewal header nav .nav-memory-menu { left: 50%; transform: translateX(-50%); }
 
     body.renewal .hero {
         min-height: 540px;
@@ -734,6 +766,10 @@ body.renewal .modal-content {
     body.renewal .card,
     body.renewal .step-card,
     body.renewal .process-step { padding: 24px 22px !important; }
+    body.page-church .quick-grid,
+    body.page-temple .quick-grid { grid-template-columns: 1fr; gap: 10px !important; }
+    body.page-church .quick-card,
+    body.page-temple .quick-card { padding: 17px 16px !important; }
     body.renewal .featured-video-block { padding: 16px !important; border-radius: 20px !important; }
     body.renewal .featured-video-shell { border-radius: 14px !important; }
     body.renewal .comparison-container { overflow-x: auto; }
