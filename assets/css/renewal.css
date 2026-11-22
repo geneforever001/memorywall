@@ -548,26 +548,27 @@ body.page-temple .quick-card p {
 }
 
 body.page-temple #meaning .card-container {
-    width: min(560px, 100%);
+    width: min(760px, 100%);
     margin: 28px auto 0;
     display: grid;
     grid-template-columns: 1fr;
-    gap: 12px !important;
+    gap: 10px !important;
 }
 
 body.page-temple #meaning .card {
-    padding: 20px 22px !important;
+    padding: 16px 22px !important;
     border-radius: 16px !important;
 }
 
 body.page-temple #meaning .card h4 {
-    margin-bottom: 7px;
+    margin: 0 0 6px;
     font-size: 1.2rem !important;
 }
 
 body.page-temple #meaning .card p {
+    margin: 0;
     font-size: 1rem;
-    line-height: 1.6;
+    line-height: 1.5;
 }
 
 body.renewal .card-icon,
