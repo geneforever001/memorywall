@@ -551,7 +551,8 @@ body.page-temple .quick-card p {
     line-height: 1.55;
 }
 
-body.page-temple #meaning .card-container {
+body.page-temple #meaning .card-container,
+body.page-temple #preservation .card-container {
     width: min(760px, 100%);
     margin: 28px auto 0;
     display: grid;
@@ -559,17 +560,20 @@ body.page-temple #meaning .card-container {
     gap: 10px !important;
 }
 
-body.page-temple #meaning .card {
+body.page-temple #meaning .card,
+body.page-temple #preservation .card {
     padding: 16px 22px !important;
     border-radius: 16px !important;
 }
 
-body.page-temple #meaning .card h4 {
+body.page-temple #meaning .card h4,
+body.page-temple #preservation .card h4 {
     margin: 0 0 6px;
     font-size: 1.2rem !important;
 }
 
-body.page-temple #meaning .card p {
+body.page-temple #meaning .card p,
+body.page-temple #preservation .card p {
     margin: 0;
     font-size: 1rem;
     line-height: 1.5;
