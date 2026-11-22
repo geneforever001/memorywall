@@ -547,6 +547,29 @@ body.page-temple .quick-card p {
     line-height: 1.55;
 }
 
+body.page-temple #meaning .card-container {
+    width: min(720px, 100%);
+    margin: 28px auto 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px !important;
+}
+
+body.page-temple #meaning .card {
+    padding: 20px 22px !important;
+    border-radius: 16px !important;
+}
+
+body.page-temple #meaning .card h4 {
+    margin-bottom: 7px;
+    font-size: 1.05rem !important;
+}
+
+body.page-temple #meaning .card p {
+    font-size: .93rem;
+    line-height: 1.6;
+}
+
 body.renewal .card-icon,
 body.renewal .step-number {
     color: var(--renewal-navy) !important;
