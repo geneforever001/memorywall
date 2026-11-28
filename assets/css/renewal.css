@@ -288,10 +288,10 @@ body.page-dna .hero img {
 
 body.page-home .home-process-hero {
     position: relative;
-    min-height: clamp(420px, 43vw, 600px) !important;
+    min-height: clamp(430px, 40vw, 570px) !important;
     display: flex !important;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     overflow: hidden;
     isolation: isolate;
 }
@@ -302,7 +302,9 @@ body.page-home .home-process-hero::after {
     inset: 0;
     z-index: 1;
     display: block;
-    background: linear-gradient(180deg, rgba(18, 39, 57, .22), rgba(18, 39, 57, .52));
+    background:
+        linear-gradient(90deg, rgba(7, 28, 34, .95) 0%, rgba(7, 28, 34, .83) 42%, rgba(7, 28, 34, .38) 72%, rgba(7, 28, 34, .42) 100%),
+        linear-gradient(180deg, rgba(7, 28, 34, 1) 0%, rgba(7, 28, 34, .98) 34%, rgba(7, 28, 34, .72) 54%, rgba(7, 28, 34, .64) 100%);
 }
 
 body.page-home .home-process-hero > img {
@@ -313,44 +315,47 @@ body.page-home .home-process-hero > img {
     min-height: 0 !important;
     max-height: none;
     object-fit: cover;
-    object-position: center bottom !important;
-    transform: scale(1.8);
+    object-position: center 72% !important;
+    transform: scale(1.42);
     transform-origin: center bottom;
-    filter: brightness(.68) saturate(.82);
+    filter: brightness(.72) saturate(.82);
 }
 
 body.page-home .home-process-hero-copy {
     position: relative;
     z-index: 2;
-    width: min(880px, calc(100% - 40px));
-    padding: 30px 24px;
+    width: min(1180px, calc(100% - 48px));
+    margin: 0 auto;
+    padding: 38px 0;
     color: #fff;
-    text-align: center;
+    text-align: left;
     text-shadow: 0 3px 18px rgba(0, 0, 0, .42);
 }
 
-body.page-home .home-process-hero-copy span {
+body.page-home .home-process-kicker {
     display: inline-block;
-    margin-bottom: 14px;
+    margin-bottom: 12px;
     color: #efd7a4;
-    font-size: .78rem;
+    font-size: .74rem;
     font-weight: 800;
     letter-spacing: .22em;
 }
 
 body.page-home .home-process-hero-copy h1 {
-    margin: 0 0 18px;
+    max-width: 780px;
+    margin: 0 0 20px;
     color: #fff;
-    font-size: clamp(2rem, 4.2vw, 4rem);
-    line-height: 1.22;
+    font-size: clamp(2.35rem, 3.7vw, 3.55rem);
+    line-height: 1.17;
     letter-spacing: -.035em;
 }
 
 body.page-home .home-process-hero-copy p {
+    max-width: 680px;
     margin: 0;
     color: rgba(255, 255, 255, .92);
-    font-size: clamp(.95rem, 1.5vw, 1.18rem);
-    line-height: 1.8;
+    font-size: clamp(.94rem, 1.25vw, 1.08rem);
+    line-height: 1.75;
 }
 
 .trust-strip {
@@ -1151,6 +1156,11 @@ body.page-digital {
     body.renewal .hero h1 br { display: none; }
     body.renewal .hero-chip { font-size: .8rem !important; }
     body.page-home .hero img { min-height: 250px; }
+    body.page-home .home-process-hero { min-height: 420px !important; }
+    body.page-home .home-process-hero > img { transform: scale(1.65); object-position: 60% 72% !important; }
+    body.page-home .home-process-hero-copy { width: calc(100% - 36px); padding: 34px 0; }
+    body.page-home .home-process-hero-copy h1 { font-size: clamp(2rem, 10vw, 2.6rem); line-height: 1.18; }
+    body.page-home .home-process-hero-copy p { font-size: .93rem; line-height: 1.7; }
     body.renewal .quick-card,
     body.renewal .card,
     body.renewal .step-card,

@@ -349,7 +349,7 @@
     .intro-grid.reverse { direction: ltr; }
 }
     </style>
-    <link rel="stylesheet" href="../assets/css/renewal.css?v=20261128-1">
+    <link rel="stylesheet" href="../assets/css/renewal.css?v=20261128-2">
 </head>
 <body class="renewal page-home">
 
@@ -379,7 +379,7 @@
     <div class="hero home-process-hero" id="home">
         <img src="../assets/images/브랜드dna앞부분.png" alt="생전에 본인의 뜻으로 DNA 오브제를 제작해 직접 보관하고, 사후에는 기억의 공간에 안치·보존하는 진포에버 시스템입니다.">
         <div class="home-process-hero-copy">
-            <span>DNA MEMORY OBJECT</span>
+            <span class="home-process-kicker">DNA MEMORY OBJECT</span>
             <h1>생전에 준비하고,<br>사후에 기억으로 이어집니다</h1>
             <p>본인의 뜻으로 제작한 DNA 오브제는 생전에 직접 보관하고,<br>사후에는 미리 정한 방식에 따라 기억의 공간에 안치·보존합니다.</p>
         </div>
@@ -714,6 +714,25 @@
         }, observerOptions);
 
         sections.forEach(section => observer.observe(section));
+
+        // 펼친 작은 메뉴가 본문 위에 계속 남지 않도록 정리합니다.
+        const navDropdowns = document.querySelectorAll('details.nav-dropdown');
+        document.addEventListener('click', (event) => {
+            navDropdowns.forEach(dropdown => {
+                if (!dropdown.contains(event.target)) dropdown.removeAttribute('open');
+            });
+        });
+        navDropdowns.forEach(dropdown => {
+            dropdown.addEventListener('toggle', () => {
+                if (!dropdown.open) return;
+                navDropdowns.forEach(other => {
+                    if (other !== dropdown) other.removeAttribute('open');
+                });
+            });
+        });
+        window.addEventListener('scroll', () => {
+            navDropdowns.forEach(dropdown => dropdown.removeAttribute('open'));
+        }, { passive: true });
     </script>
 </body>
 </html>
