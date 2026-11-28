@@ -931,6 +931,31 @@ body.page-digital {
 .signup-point strong { display: block; color: #f4ddb7; font-size: 1rem; }
 .signup-point span { display: block; margin-top: 6px; color: rgba(255,255,255,.74); font-size: .9rem; line-height: 1.55; }
 
+.membership-fees {
+    margin-top: 28px;
+    padding: clamp(24px, 4vw, 38px);
+    background: #fff;
+    border: 1px solid var(--renewal-line);
+    border-radius: 24px;
+    box-shadow: var(--renewal-shadow-soft);
+}
+
+.membership-fees-heading h2 { margin: 5px 0 0 !important; font-size: clamp(1.55rem, 3vw, 2.2rem) !important; }
+.membership-fees-heading p { margin: 8px 0 0; color: #607174; line-height: 1.7; }
+.membership-fee-grid { margin-top: 22px; display: grid; grid-template-columns: 1.35fr 1fr; gap: 16px; }
+.membership-fee-card { padding: 22px; background: #f7f8f6; border: 1px solid #dfe5e2; border-radius: 20px; }
+.membership-fee-card.is-organization { background: #f7f1e6; border-color: #e4d1ad; }
+.membership-fee-type { display: inline-block; padding: 6px 11px; color: #fff; background: var(--renewal-navy); border-radius: 999px; font-size: .82rem; font-weight: 800; }
+.membership-fee-card h3 { margin: 13px 0 !important; color: var(--renewal-ink); font-size: 1.15rem !important; }
+.membership-fee-card dl { margin: 0; }
+.membership-fee-card dl div { padding: 10px 0; display: flex; justify-content: space-between; gap: 16px; border-top: 1px solid #dfe5e2; }
+.membership-fee-card dt { font-weight: 750; }
+.membership-fee-card dd { margin: 0; color: #55696c; text-align: right; }
+.membership-fee-price { margin: 0; color: #344a4d; font-size: 1rem; line-height: 1.7; }
+.membership-fee-price strong { color: var(--renewal-navy); font-size: 1.15rem; }
+.membership-fee-note { margin: 12px 0 0; color: #6a7473; font-size: .9rem; line-height: 1.6; }
+.membership-link-note { margin: 16px 0 0; padding: 14px 16px; color: #43595c; background: #eef3f1; border-radius: 14px; line-height: 1.65; }
+
 .signup-choice {
     margin: 34px auto 0;
     padding: clamp(24px, 4vw, 38px);
@@ -1024,6 +1049,10 @@ body.page-digital {
 }
 
 .application-field textarea { min-height: 120px; resize: vertical; }
+.application-field input[readonly] { color: #53676a; background: #f3f5f4; }
+.application-field input[type="file"] { padding: 10px; background: #fbfcfb; }
+.application-field small { display: block; margin-top: 7px; color: #6b7a7d; font-size: .84rem; line-height: 1.55; }
+.field-optional { color: #78888a; font-size: .83rem; font-weight: 600; }
 .application-field input:focus,
 .application-field select:focus,
 .application-field textarea:focus { outline: 3px solid rgba(182,138,82,.2); border-color: var(--renewal-gold); }
@@ -1042,6 +1071,20 @@ body.page-digital {
 }
 
 .application-consent input { margin-top: 4px; }
+
+.application-autopay {
+    margin-top: 22px;
+    padding: 16px;
+    display: flex;
+    gap: 10px;
+    color: #42585b;
+    background: #f7f1e6;
+    border: 1px solid #e4d1ad;
+    border-radius: 14px;
+    line-height: 1.6;
+}
+
+.application-autopay input { margin-top: 4px; }
 
 .application-notice {
     margin: 18px 0 0;
@@ -1108,6 +1151,9 @@ body.page-digital {
     body.renewal header nav .nav-dropdown-menu { left: 50%; transform: translateX(-50%); }
 
     .signup-points { grid-template-columns: 1fr; }
+    .membership-fee-grid { grid-template-columns: 1fr; }
+    .membership-fee-card dl div { display: block; }
+    .membership-fee-card dd { margin-top: 3px; text-align: left; }
     .application-grid { grid-template-columns: 1fr; }
     .application-field.full { grid-column: auto; }
     .digital-frame iframe { min-height: 640px; height: 78vh; }
