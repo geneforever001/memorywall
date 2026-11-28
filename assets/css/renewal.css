@@ -342,10 +342,10 @@ body.page-home .home-process-kicker {
 }
 
 body.page-home .home-process-hero-copy h1 {
-    max-width: 780px;
+    max-width: 900px;
     margin: 0 0 20px;
     color: #fff;
-    font-size: clamp(2.35rem, 3.7vw, 3.55rem);
+    font-size: clamp(2.35rem, 3.7vw, 3.25rem);
     line-height: 1.17;
     letter-spacing: -.035em;
 }
