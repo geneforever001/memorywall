@@ -101,13 +101,13 @@ body.renewal header nav a {
     transition: color .2s ease, background .2s ease, border-color .2s ease;
 }
 
-body.renewal header nav .nav-memory {
+body.renewal header nav .nav-dropdown {
     position: relative;
     width: auto;
     flex: 0 0 auto;
 }
 
-body.renewal header nav .nav-memory summary {
+body.renewal header nav .nav-dropdown summary {
     width: auto;
     padding: 10px 15px;
     display: flex;
@@ -125,18 +125,19 @@ body.renewal header nav .nav-memory summary {
     transition: color .2s ease, background .2s ease, border-color .2s ease;
 }
 
-body.renewal header nav .nav-memory summary::-webkit-details-marker { display: none; }
+body.renewal header nav .nav-dropdown summary::-webkit-details-marker { display: none; }
 
-body.renewal header nav .nav-memory summary:hover,
-body.renewal header nav .nav-memory[open] summary,
+body.renewal header nav .nav-dropdown summary:hover,
+body.renewal header nav .nav-dropdown[open] summary,
 body.page-church header nav .nav-memory summary,
-body.page-temple header nav .nav-memory summary {
+body.page-temple header nav .nav-memory summary,
+body.page-digital header nav .nav-digital summary {
     color: #fff;
     background: rgba(255,255,255,.1);
     border-color: rgba(244, 221, 183, .38);
 }
 
-body.renewal header nav .nav-memory-menu {
+body.renewal header nav .nav-dropdown-menu {
     position: absolute;
     top: calc(100% + 7px);
     left: 50%;
@@ -154,7 +155,7 @@ body.renewal header nav .nav-memory-menu {
     box-shadow: none;
 }
 
-body.renewal header nav .nav-memory-menu a {
+body.renewal header nav .nav-dropdown-menu a {
     display: block;
     width: auto;
     min-width: 0;
@@ -170,7 +171,8 @@ body.renewal header nav .nav-memory-menu a {
     box-shadow: 0 8px 20px rgba(0,0,0,.2);
 }
 
-body.renewal header nav .nav-memory-menu a:hover {
+body.renewal header nav .nav-dropdown-menu a:hover,
+body.renewal header nav .nav-dropdown-menu a[aria-current="page"] {
     color: #17363a !important;
     background: #f4ddb7;
     border-color: #f4ddb7;
@@ -812,6 +814,268 @@ body.renewal .modal-content {
     box-shadow: var(--renewal-shadow);
 }
 
+/* 디지털관 */
+body.page-digital {
+    background: var(--renewal-cream);
+}
+
+.digital-main {
+    min-height: calc(100vh - 170px);
+    padding: clamp(42px, 7vw, 82px) max(5vw, 22px) 80px;
+}
+
+.digital-container {
+    width: min(1180px, 100%);
+    margin: 0 auto;
+}
+
+.digital-heading {
+    max-width: 760px;
+    margin-bottom: 30px;
+}
+
+.digital-kicker {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: var(--renewal-gold);
+    font-size: .9rem;
+    font-weight: 800;
+    letter-spacing: .12em;
+}
+
+.digital-heading h1 {
+    margin: 0;
+    color: var(--renewal-navy);
+    font-family: Georgia, "Noto Serif KR", serif;
+    font-size: clamp(2.25rem, 5vw, 4.4rem);
+    line-height: 1.13;
+    letter-spacing: -.05em;
+}
+
+.digital-heading p {
+    margin: 16px 0 0;
+    color: #596c70;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.digital-frame {
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid var(--renewal-line);
+    border-radius: 24px;
+    box-shadow: var(--renewal-shadow);
+}
+
+.digital-frame iframe {
+    width: 100%;
+    height: min(1050px, 82vh);
+    min-height: 720px;
+    display: block;
+    border: 0;
+    background: #fff;
+}
+
+.digital-frame-note {
+    margin: 14px 4px 0;
+    color: #66777a;
+    font-size: .9rem;
+    text-align: right;
+}
+
+.digital-frame-note a { color: var(--renewal-navy); font-weight: 750; }
+
+.signup-intro {
+    padding: clamp(28px, 5vw, 52px);
+    color: #fff;
+    background: linear-gradient(135deg, var(--renewal-navy-deep), var(--renewal-navy));
+    border-radius: 28px;
+    box-shadow: var(--renewal-shadow);
+}
+
+.signup-intro h1 {
+    margin: 0;
+    color: #fff;
+    font-family: Georgia, "Noto Serif KR", serif;
+    font-size: clamp(2.1rem, 4.5vw, 3.7rem);
+    line-height: 1.2;
+}
+
+.signup-intro p {
+    max-width: 840px;
+    margin: 15px 0 0;
+    color: rgba(255,255,255,.8);
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.signup-points {
+    margin-top: 28px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.signup-point {
+    padding: 18px;
+    background: rgba(255,255,255,.08);
+    border: 1px solid rgba(255,255,255,.12);
+    border-radius: 18px;
+}
+
+.signup-point strong { display: block; color: #f4ddb7; font-size: 1rem; }
+.signup-point span { display: block; margin-top: 6px; color: rgba(255,255,255,.74); font-size: .9rem; line-height: 1.55; }
+
+.signup-choice {
+    margin: 34px auto 0;
+    padding: clamp(24px, 4vw, 38px);
+    background: #fff;
+    border: 1px solid var(--renewal-line);
+    border-radius: 24px;
+    box-shadow: var(--renewal-shadow-soft);
+    text-align: center;
+}
+
+.signup-choice h2 {
+    margin: 0 !important;
+    font-size: clamp(1.55rem, 3vw, 2.2rem) !important;
+}
+
+.signup-choice p { margin: 10px 0 22px; color: #607174; line-height: 1.7; }
+
+.signup-choice-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.signup-choice-button {
+    min-width: 190px;
+    padding: 13px 22px;
+    color: #fff;
+    background: var(--renewal-navy);
+    border: 1px solid var(--renewal-navy);
+    border-radius: 999px;
+    font: inherit;
+    font-size: 1rem;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.signup-choice-button:hover,
+.signup-choice-button[aria-pressed="true"] {
+    color: var(--renewal-navy-deep);
+    background: #f4ddb7;
+    border-color: #d6b577;
+}
+
+.application-panel {
+    margin-top: 24px;
+    padding: clamp(24px, 4vw, 42px);
+    background: #fff;
+    border: 1px solid var(--renewal-line);
+    border-radius: 24px;
+    box-shadow: var(--renewal-shadow-soft);
+}
+
+.application-panel.is-hidden { display: none; }
+
+.application-panel h2 {
+    margin: 0 0 8px !important;
+    font-size: clamp(1.6rem, 3vw, 2.2rem) !important;
+}
+
+.application-panel > p { margin: 0 0 26px; color: #607174; line-height: 1.65; }
+
+.application-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.application-field.full { grid-column: 1 / -1; }
+
+.application-field label {
+    display: block;
+    margin-bottom: 7px;
+    color: var(--renewal-ink);
+    font-size: .95rem;
+    font-weight: 750;
+}
+
+.application-field input,
+.application-field select,
+.application-field textarea {
+    width: 100%;
+    padding: 13px 14px;
+    color: var(--renewal-ink);
+    background: #fff;
+    border: 1px solid #ccd7d5;
+    border-radius: 12px;
+    font: inherit;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.application-field textarea { min-height: 120px; resize: vertical; }
+.application-field input:focus,
+.application-field select:focus,
+.application-field textarea:focus { outline: 3px solid rgba(182,138,82,.2); border-color: var(--renewal-gold); }
+
+.application-consent {
+    margin-top: 22px;
+    padding: 16px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    color: #526568;
+    background: var(--renewal-mist);
+    border-radius: 14px;
+    font-size: .9rem;
+    line-height: 1.6;
+}
+
+.application-consent input { margin-top: 4px; }
+
+.application-notice {
+    margin: 18px 0 0;
+    color: #6b7a7d;
+    font-size: .85rem;
+    line-height: 1.6;
+}
+
+.application-submit {
+    width: 100%;
+    margin-top: 22px;
+    padding: 15px 24px;
+    color: #fff;
+    background: var(--renewal-navy);
+    border: 0;
+    border-radius: 999px;
+    font: inherit;
+    font-size: 1.05rem;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.application-submit:hover { background: var(--renewal-navy-deep); }
+
+.signup-complete {
+    max-width: 720px;
+    margin: 8vh auto;
+    padding: clamp(32px, 6vw, 62px);
+    background: #fff;
+    border: 1px solid var(--renewal-line);
+    border-radius: 28px;
+    box-shadow: var(--renewal-shadow);
+    text-align: center;
+}
+
+.signup-complete h1 { margin: 0; color: var(--renewal-navy); font-size: clamp(2rem, 4vw, 3rem); }
+.signup-complete p { margin: 16px 0 26px; color: #5f7174; font-size: 1.05rem; line-height: 1.75; }
+.signup-complete a { display: inline-block; padding: 13px 22px; color: #fff; background: var(--renewal-navy); border-radius: 999px; font-weight: 800; text-decoration: none; }
+
 @media (max-width: 900px) {
     body.renewal header {
         min-height: auto;
@@ -835,8 +1099,13 @@ body.renewal .modal-content {
 
     body.renewal header nav::-webkit-scrollbar { display: none; }
     body.renewal header nav a { padding: 8px 10px !important; font-size: .86rem; }
-    body.renewal header nav .nav-memory summary { padding: 8px 10px; font-size: .86rem; white-space: nowrap; }
-    body.renewal header nav .nav-memory-menu { left: 50%; transform: translateX(-50%); }
+    body.renewal header nav .nav-dropdown summary { padding: 8px 10px; font-size: .86rem; white-space: nowrap; }
+    body.renewal header nav .nav-dropdown-menu { left: 50%; transform: translateX(-50%); }
+
+    .signup-points { grid-template-columns: 1fr; }
+    .application-grid { grid-template-columns: 1fr; }
+    .application-field.full { grid-column: auto; }
+    .digital-frame iframe { min-height: 640px; height: 78vh; }
 
     body.renewal .hero {
         min-height: 540px;

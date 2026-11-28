@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light">
+    <title>가입신청 | GENE FOREVER 디지털관</title>
+    <link rel="stylesheet" href="../assets/css/renewal.css?v=20261128-1">
+</head>
+<body class="renewal page-digital">
+    <header>
+        <a href="index.html" class="logo">GENE FOREVER</a>
+        <nav aria-label="주요 메뉴">
+            <a href="index.html">메인페이지</a>
+            <details class="nav-dropdown nav-memory">
+                <summary>기억의 벽</summary>
+                <div class="nav-dropdown-menu">
+                    <a href="교회페이지.html">교회</a>
+                    <a href="사찰페이지.html">사찰</a>
+                </div>
+            </details>
+            <a href="반려동물.html">반려동물</a>
+            <details class="nav-dropdown nav-digital">
+                <summary>디지털관</summary>
+                <div class="nav-dropdown-menu">
+                    <a href="가족기록.html">가족기록</a>
+                    <a href="가입신청.html" aria-current="page">가입신청</a>
+                </div>
+            </details>
+            <a href="DNA파크.html">DNA파크</a>
+        </nav>
+    </header>
+
+    <main class="digital-main">
+        <div class="digital-container">
+            <section class="signup-intro">
+                <span class="digital-kicker">DIGITAL ARCHIVE MEMBERSHIP</span>
+                <h1>가족의 이야기를<br>다음 세대와 이어보세요</h1>
+                <p>가족기록관은 가족의 계보와 인물 이야기, 소중한 사진과 기록을 디지털 형태로 정리해 함께 열람하고 이어갈 수 있는 가족 전용 기록 공간입니다.</p>
+                <div class="signup-points">
+                    <div class="signup-point"><strong>가족 관계 정리</strong><span>세대별 가족 관계와 주요 기록을 보기 쉽게 구성합니다.</span></div>
+                    <div class="signup-point"><strong>단체·개인 신청</strong><span>협회·종교기관·문중 등 단체와 개인 가족 모두 신청할 수 있습니다.</span></div>
+                    <div class="signup-point"><strong>담당자 확인</strong><span>신청 내용을 확인한 뒤 준비 과정과 필요한 자료를 안내드립니다.</span></div>
+                </div>
+            </section>
+
+            <section class="signup-choice" aria-labelledby="signup-choice-title">
+                <h2 id="signup-choice-title">가입 유형을 선택해 주세요</h2>
+                <p>아래 버튼을 누르면 선택한 가입신청서가 나타납니다.</p>
+                <div class="signup-choice-buttons">
+                    <button type="button" class="signup-choice-button" data-form-target="organization-form" aria-pressed="false">단체 가입하기</button>
+                    <button type="button" class="signup-choice-button" data-form-target="personal-form" aria-pressed="false">개인 가입하기</button>
+                </div>
+            </section>
+
+            <form id="organization-form" class="application-panel is-hidden" action="https://formsubmit.co/geneforever001@gmail.com" method="POST">
+                <input type="hidden" name="_subject" value="[진포에버 디지털관] 단체 가입신청">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_next" value="https://www.memorywall.co.kr/pages/가입신청완료.html">
+                <input type="hidden" name="_url" value="https://www.memorywall.co.kr/pages/가입신청.html">
+                <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+                <h2>단체 가입신청서</h2>
+                <p>담당자가 신청 내용을 확인한 후 연락드리겠습니다.</p>
+                <div class="application-grid">
+                    <div class="application-field">
+                        <label for="org-type">단체 종류 *</label>
+                        <select id="org-type" name="단체_종류" required>
+                            <option value="">선택해 주세요</option>
+                            <option>협회</option><option>향우회</option><option>교회</option><option>사찰</option><option>기념관</option><option>문중</option><option>기타</option>
+                        </select>
+                    </div>
+                    <div class="application-field">
+                        <label for="org-name">단체명 *</label>
+                        <input id="org-name" name="단체명" type="text" required>
+                    </div>
+                    <div class="application-field">
+                        <label for="org-contact">담당자 이름 *</label>
+                        <input id="org-contact" name="담당자_이름" type="text" autocomplete="name" required>
+                    </div>
+                    <div class="application-field">
+                        <label for="org-phone">연락처 *</label>
+                        <input id="org-phone" name="연락처" type="tel" autocomplete="tel" placeholder="010-0000-0000" required>
+                    </div>
+                    <div class="application-field">
+                        <label for="org-email">이메일 *</label>
+                        <input id="org-email" name="email" type="email" autocomplete="email" required>
+                    </div>
+                    <div class="application-field">
+                        <label for="org-count">예상 등록 인원</label>
+                        <input id="org-count" name="예상_등록_인원" type="number" min="1" inputmode="numeric">
+                    </div>
+                    <div class="application-field full">
+                        <label for="org-link">희망 연동 방식</label>
+                        <select id="org-link" name="희망_연동_방식">
+                            <option>홈페이지</option><option>키오스크</option><option>홈페이지와 키오스크 모두</option><option>상담 후 결정</option>
+                        </select>
+                    </div>
+                    <div class="application-field full">
+                        <label for="org-message">문의 내용</label>
+                        <textarea id="org-message" name="문의_내용" placeholder="단체의 성격과 희망하는 이용 방법을 적어주세요."></textarea>
+                    </div>
+                </div>
+                <label class="application-consent"><input type="checkbox" name="개인정보_수집_이용_동의" value="동의함" required><span>가입 상담과 신청 확인을 위한 개인정보 수집·이용에 동의합니다. 입력 정보는 상담과 가입 진행을 위해 사용되며, 동의하지 않으면 신청서를 제출할 수 없습니다.</span></label>
+                <p class="application-notice">신청 내용은 이메일 접수를 위해 외부 전송 서비스(FormSubmit)를 통해 담당자에게 전달됩니다. 사진 자료는 담당자 확인 후 별도로 안내드립니다.</p>
+                <button class="application-submit" type="submit">단체 가입신청서 보내기</button>
+            </form>
+
+            <form id="personal-form" class="application-panel is-hidden" action="https://formsubmit.co/geneforever001@gmail.com" method="POST">
+                <input type="hidden" name="_subject" value="[진포에버 디지털관] 개인 가입신청">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_next" value="https://www.memorywall.co.kr/pages/가입신청완료.html">
+                <input type="hidden" name="_url" value="https://www.memorywall.co.kr/pages/가입신청.html">
+                <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+                <h2>개인 가입신청서</h2>
+                <p>가족기록관 개설을 희망하는 분이 직접 신청하는 양식입니다.</p>
+                <div class="application-grid">
+                    <div class="application-field">
+                        <label for="personal-name">신청자 이름 *</label>
+                        <input id="personal-name" name="신청자_이름" type="text" autocomplete="name" required>
+                    </div>
+                    <div class="application-field">
+                        <label for="personal-phone">연락처 *</label>
+                        <input id="personal-phone" name="연락처" type="tel" autocomplete="tel" placeholder="010-0000-0000" required>
+                    </div>
+                    <div class="application-field">
+                        <label for="personal-email">이메일 *</label>
+                        <input id="personal-email" name="email" type="email" autocomplete="email" required>
+                    </div>
+                    <div class="application-field">
+                        <label for="family-title">가족기록관 이름</label>
+                        <input id="family-title" name="가족기록관_이름" type="text" placeholder="예: 홍길동 가족기록관">
+                    </div>
+                    <div class="application-field full">
+                        <label for="family-count">예상 가족 인원</label>
+                        <input id="family-count" name="예상_가족_인원" type="number" min="1" inputmode="numeric">
+                    </div>
+                    <div class="application-field full">
+                        <label for="personal-message">문의 내용</label>
+                        <textarea id="personal-message" name="문의_내용" placeholder="남기고 싶은 가족기록과 궁금한 내용을 적어주세요."></textarea>
+                    </div>
+                </div>
+                <label class="application-consent"><input type="checkbox" name="개인정보_수집_이용_동의" value="동의함" required><span>가입 상담과 신청 확인을 위한 개인정보 수집·이용에 동의합니다. 입력 정보는 상담과 가입 진행을 위해 사용되며, 동의하지 않으면 신청서를 제출할 수 없습니다.</span></label>
+                <p class="application-notice">신청 내용은 이메일 접수를 위해 외부 전송 서비스(FormSubmit)를 통해 담당자에게 전달됩니다. 사진 자료는 담당자 확인 후 별도로 안내드립니다.</p>
+                <button class="application-submit" type="submit">개인 가입신청서 보내기</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p style="margin-bottom: 10px; font-weight: bold;">진포에버(주) | ☎(032)822-0555(代) Fax.(0504)031-9411</p>
+        <p style="margin-bottom: 10px; font-size: 0.9rem; opacity: 0.8;">인천시 계양구 계산새로 87번길 6, 레드몰 2차 5층 504호</p>
+        <p style="font-size: 0.85rem; opacity: 0.6;">All rights reserved.</p>
+    </footer>
+
+    <script>
+        const choiceButtons = document.querySelectorAll('[data-form-target]');
+        const applicationPanels = document.querySelectorAll('.application-panel');
+
+        choiceButtons.forEach((button) => {
+            button.addEventListener('click', () => {
+                const targetId = button.dataset.formTarget;
+                applicationPanels.forEach((panel) => panel.classList.toggle('is-hidden', panel.id !== targetId));
+                choiceButtons.forEach((item) => item.setAttribute('aria-pressed', item === button ? 'true' : 'false'));
+                document.getElementById(targetId).scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        });
+    </script>
+</body>
+</html>
